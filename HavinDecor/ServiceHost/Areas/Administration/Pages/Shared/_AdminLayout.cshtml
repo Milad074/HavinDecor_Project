@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="images/favicon_1.ico">
+
+    <title> @ViewData["Title"] | HavinDecor </title>
+
+    <!-- Base Css Files -->
+    <link href="~/AdminTheme/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Icons -->
+    <link href="~/AdminTheme/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/AdminTheme/assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/AdminTheme/assets/css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- animate css -->
+    <link href="~/AdminTheme/assets/css/animate.css" rel="stylesheet" />
+
+    <!-- Waves-effect -->
+    <link href="~/AdminTheme/assets/css/waves-effect.css" rel="stylesheet">
+
+    <link href="~/AdminTheme/assets/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- sweet alerts -->
+    <link href="~/AdminTheme/assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+
+    <!-- Custom Files -->
+    <link href="~/AdminTheme/assets/css/persian-datepicker.min.css" rel="stylesheet" />
+
+    @RenderSection("Css", false)
+
+    <link href="~/AdminTheme/assets/css/helper.css" rel="stylesheet" type="text/css" />
+    <link href="~/AdminTheme/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="~/AdminTheme/assets/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="fixed-left">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <div class="text-center">
+                    <a href="index.html" class="logo"><i class="md md-terrain"></i> <span>HavinDecor </span></a>
+                </div>
+            </div>
+            <!-- Button mobile view to collapse sidebar menu -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="">
+                        <div class="pull-left">
+                            <button class="button-menu-mobile open-left">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <span class="clearfix"></span>
+                        </div>
+                        <form class="navbar-form pull-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control search-bar" placeholder="برای جستو جو تایپ کنید...">
+                            </div>
+                            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+                        </form>
+
+
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="sidebar-inner slimscrollleft">
+                <div class="user-details">
+                    <div class="pull-left">
+                        <img src="~/AdminTheme/assets/images/users/avatar-1.jpg" alt="" class="thumb-md img-circle">
+                    </div>
+                    <div class="user-info">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">میلاد غایبی <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>
+                                <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
+                                <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
+                                <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>
+                            </ul>
+                        </div>
+
+                        <p class="text-muted m-0">مدیر سایت</p>
+                    </div>
+                </div>
+                <!--- Divider -->
+                <div id="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a asp-page="./Index" class="waves-effect active"><i class="md md-home"></i><span> داشبورد </span></a>
+                        </li>
+
+                        <li class="has_sub">
+                            <a class="waves-effect"><i class="md md-mail"></i><span> فروشگاه </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul class="list-unstyled">
+
+                                <li><a>اسلایدر</a></li>
+
+                                <li><a asp-page="Shop/ProductCategories/Index">گروه محصولات</a></li>
+
+                                <li><a>محصولات</a></li>
+
+                                <li><a>عکس محصولات</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="calendar.html" class="waves-effect"><i class="md md-event"></i><span> Calendar </span></a>
+                        </li>
+
+
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+
+                @RenderBody()
+
+            </div> <!-- content -->
+
+            <footer class="footer text-right">
+                2015 © Moltran.
+            </footer>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+        <!-- Right Sidebar -->
+        <div class="side-bar right-bar nicescroll">
+            <h4 class="text-center">Chat</h4>
+            <div class="contact-list nicescroll">
+                <ul class="list-group contacts-list">
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-1.jpg" alt="">
+                            </div>
+                            <span class="name">Chadengle</span>
+                            <i class="fa fa-circle online"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-2.jpg" alt="">
+                            </div>
+                            <span class="name">Tomaslau</span>
+                            <i class="fa fa-circle online"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-3.jpg" alt="">
+                            </div>
+                            <span class="name">Stillnotdavid</span>
+                            <i class="fa fa-circle online"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-4.jpg" alt="">
+                            </div>
+                            <span class="name">Kurafire</span>
+                            <i class="fa fa-circle online"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-5.jpg" alt="">
+                            </div>
+                            <span class="name">Shahedk</span>
+                            <i class="fa fa-circle away"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-6.jpg" alt="">
+                            </div>
+                            <span class="name">Adhamdannaway</span>
+                            <i class="fa fa-circle away"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-7.jpg" alt="">
+                            </div>
+                            <span class="name">Ok</span>
+                            <i class="fa fa-circle away"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-8.jpg" alt="">
+                            </div>
+                            <span class="name">Arashasghari</span>
+                            <i class="fa fa-circle offline"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-9.jpg" alt="">
+                            </div>
+                            <span class="name">Joshaustin</span>
+                            <i class="fa fa-circle offline"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <div class="avatar">
+                                <img src="images/users/avatar-10.jpg" alt="">
+                            </div>
+                            <span class="name">Sortino</span>
+                            <i class="fa fa-circle offline"></i>
+                        </a>
+                        <span class="clearfix"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /Right-bar -->
+
+        <div id="MainModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content" id="ModalContent">
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- END wrapper -->
+    <!-- <script> -->
+    <!-- var resizefunc = []; -->
+    <!-- </script> -->
+    <!-- jQuery  -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/AdminTheme/assets/js/bootstrap.min.js"></script>
+    <script src="~/AdminTheme/assets/js/waves.js"></script>
+    <script src="~/AdminTheme/assets/js/wow.min.js"></script>
+    <script src="~/AdminTheme/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="~/AdminTheme/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="~/AdminTheme/assets/chat/moment-2.2.1.js"></script>
+    <script src="~/AdminTheme/assets/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="~/AdminTheme/assets/jquery-detectmobile/detect.js"></script>
+    <script src="~/AdminTheme/assets/fastclick/fastclick.js"></script>
+    <script src="~/AdminTheme/assets/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="~/AdminTheme/assets/jquery-blockui/jquery.blockUI.js"></script>
+
+    <!-- sweet alerts -->
+    <script src="~/AdminTheme/assets/sweet-alert/sweet-alert.min.js"></script>
+    <script src="~/AdminTheme/assets/sweet-alert/sweet-alert.init.js"></script>
+
+    <!-- flot Chart -->
+    <script src="~/AdminTheme/assets/flot-chart/jquery.flot.js"></script>
+    <script src="~/AdminTheme/assets/flot-chart/jquery.flot.time.js"></script>
+    <script src="~/AdminTheme/assets/flot-chart/jquery.flot.tooltip.min.js"></script>
+    <script src="~/AdminTheme/assets/flot-chart/jquery.flot.resize.js"></script>
+    <script src="~/AdminTheme/assets/flot-chart/jquery.flot.pie.js"></script>
+    <script src="~/AdminTheme/assets/flot-chart/jquery.flot.selection.js"></script>
+    <script src="~/AdminTheme/assets/flot-chart/jquery.flot.stack.js"></script>
+    <script src="~/AdminTheme/assets/flot-chart/jquery.flot.crosshair.js"></script>
+
+    <!-- Counter-up -->
+    <script src="~/AdminTheme/assets/counterup/waypoints.min.js" type="text/javascript"></script>
+    <script src="~/AdminTheme/assets/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+
+
+    <!-- CUSTOM JS -->
+    <script src="~/AdminTheme/assets/js/jquery.app.js"></script>
+
+    <!-- Dashboard -->
+    <script src="~/AdminTheme/assets/js/jquery.dashboard.js"></script>
+
+    <!-- Chat -->
+    <script src="~/AdminTheme/assets/js/jquery.chat.js"></script>
+
+    <!-- Todo -->
+    <script src="~/AdminTheme/assets/js/jquery.todo.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/AdminTheme/assets/js/site.js"></script>
+
+    <script src="~/AdminTheme/assets/js/persian-date.min.js"></script>
+    <script src="~/AdminTheme/assets/js/persian-datepicker.min.js"></script>
+
+    @RenderSection("Scripts", false)
+
+    <script>
+        $('.persianDateInput').persianDatepicker({
+            format: 'YYYY/MM/DD',
+            autoClose: true,
+            initialValueType: "persian"
+        });
+    </script>
+
+    <script src="https://cdn.tiny.cloud/1/03bywyfc22f080o11wndvso5su892zkphj49li728tkw9f3f/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#BodyContent',
+            plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            toolbar_mode: 'floating',
+        });
+    </script>
+
+</body>
+</html>
