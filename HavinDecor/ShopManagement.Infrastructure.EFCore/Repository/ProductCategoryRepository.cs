@@ -33,6 +33,16 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             }).FirstOrDefault(pc => pc.Id == id);
         }
 
+        public List<ProductCategoryViewModel> GetProductCategories()
+        {
+            return _context.ProductCategories.Select(pc => new ProductCategoryViewModel
+            {
+                Id = pc.Id,
+                Name = pc.Name
+            }).ToList();
+
+        }
+
         public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel)
         {
             var query = _context.ProductCategories.Select(pc => new ProductCategoryViewModel()
