@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using ShopManagement.Application.Contracts.ProductCategory;
 using ShopManagement.Domain.ProductCategoryAgg;
@@ -50,7 +51,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 Id = pc.Id,
                 Name = pc.Name,
                 Picture = pc.Picture,
-                CreationDate = pc.CreationDate.ToString()
+                CreationDate = pc.CreationDate.ToFarsi()
             });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))

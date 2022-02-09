@@ -21,3 +21,5 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configu
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\obj\Debug\net5.0\ref\ShopManagement.Configuration.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\bin\Debug\net5.0\01_HavinDecorQuery.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\bin\Debug\net5.0\01_HavinDecorQuery.pdb

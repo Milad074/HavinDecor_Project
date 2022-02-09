@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contracts.ProductPicture;
@@ -36,7 +37,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 {
                     Id = x.Id,
                     Picture = x.Picture,
-                    CreationDate = x.CreationDate.ToString(),
+                    CreationDate = x.CreationDate.ToFarsi(),
                     Product = x.Product.Name,
                     ProductId = x.ProductId,
                     IsRemoved = x.IsRemoved

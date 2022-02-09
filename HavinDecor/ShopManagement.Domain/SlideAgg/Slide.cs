@@ -18,11 +18,13 @@ namespace ShopManagement.Domain.SlideAgg
 
         public string BtnColor { get; private set; }
 
+        public string Link { get; private set; }
+
         public bool IsRemoved { get; private set; }
 
         public Slide(string picture, string pictureAlt,
             string pictureTitle, string heading, string title,
-            string text, string btnText, string btnColor)
+            string text, string btnText, string btnColor , string link)
         {
             Picture = picture;
             PictureAlt = pictureAlt;
@@ -32,12 +34,13 @@ namespace ShopManagement.Domain.SlideAgg
             Text = text;
             BtnText = btnText;
             BtnColor = btnColor;
+            Link = link;
             IsRemoved = false;
         }
 
         public void Edit(string picture, string pictureAlt,
             string pictureTitle, string heading, string title,
-            string text, string btnText, string btnColor)
+            string text, string btnText, string btnColor , string link)
         {
             Picture = picture;
             PictureAlt = pictureAlt;
@@ -47,6 +50,7 @@ namespace ShopManagement.Domain.SlideAgg
             Text = text;
             BtnText = btnText;
             BtnColor = btnColor;
+            Link = link;
         }
 
         public void Remove()

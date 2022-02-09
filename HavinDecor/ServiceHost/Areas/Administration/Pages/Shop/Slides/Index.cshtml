@@ -44,7 +44,7 @@
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">لیست اسلاید ها</h3>
+                <h3 class="panel-title"> (@Model.Slides.Count) لیست اسلاید ها</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -67,18 +67,18 @@
                                     <tr>
                                         <td>@item.Id</td>
                                         <td>
-                                            <img src="~/ProductPictures/@item.Picture" style="width: 70px; height: 70px" />
+                                            <img src="@item.Picture" style="width: 70px; height: 70px" />
                                         </td>
                                         <td>@item.Heading</td>
                                         <td>@item.Title</td>
                                         <td>
                                             @if (!@item.IsRemoved)
                                             {
-                                                <i class="fa fa-check fa-2x"></i>
+                                                <i class="fa fa-check fa-2x text-success"></i>
                                             }
                                             else
                                             {
-                                                <i class="fa fa-remove fa-2x"></i>
+                                                <i class="fa fa-remove fa-2x text-danger"></i>
                                             }
                                         </td>
 

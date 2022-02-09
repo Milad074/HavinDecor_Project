@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contracts.Slide;
@@ -28,7 +29,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 Title = x.Title,
                 Text = x.Text,
                 BtnText = x.BtnText,
-                BtnColor = x.BtnColor
+                BtnColor = x.BtnColor,
+                Link = x.Link
             }).FirstOrDefault(x => x.Id == id);
         }
 
@@ -37,7 +39,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             var query = _context.Slides.Select(x => new SlideViewModel
             {
                 Id = x.Id,
-                CreationDate = x.CreationDate.ToString(),
+                CreationDate = x.CreationDate.ToFarsi(),
                 Heading = x.Heading,
                 Picture = x.Picture,
                 Title = x.Title,

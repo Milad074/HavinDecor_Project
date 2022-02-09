@@ -29,5 +29,9 @@ namespace ShopManagement.Application.Contracts.Slide
 
         public string BtnColor { get; set; }
 
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
+        public string Link { get; set; }
+
+
     }
 }

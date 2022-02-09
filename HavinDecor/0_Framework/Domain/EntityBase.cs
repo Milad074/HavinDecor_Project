@@ -8,5 +8,9 @@ namespace _0_Framework.Domain
 
         public DateTime CreationDate { get;  set; }
 
+        public EntityBase()
+        {
+            CreationDate = DateTime.Now;
+        }
     }
 }
