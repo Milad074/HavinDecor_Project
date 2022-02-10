@@ -64,10 +64,8 @@
                                     <th>#</th>
                                     <th>عکس</th>
                                     <th>نام</th>
-                                    <th>قیمت</th>
                                     <th>کد</th>
                                     <th>گروه</th>
-                                    <th>وضعیت</th>
                                     <th>تاریخ تولید</th>
                                     <th>عملیات</th>
                                 </tr>
@@ -81,39 +79,15 @@
                                             <img src="@item.Picture" style="width: 70px; height: 70px" />
                                         </td>
                                         <td>@item.Name</td>
-                                        <td>@item.UnitPrice</td>
                                         <td>@item.Code</td>
                                         <td>@item.Category</td>
-                                        <td>
-                                            @if (@item.IsInStock)
-                                            {
-                                                <i class="fa fa-check text-success">موجود</i>
-                                            }
-                                            else
-                                            {
-                                                <i class="fa fa-remove text-danger">ناموجود</i>
-                                            }
-                                        </td>
                                         <td>@item.CreationDate</td>
                                         <td>
                                             <a class="btn btn-warning btn-sm pull-right m-rl-5"
                                                href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
-                                            
-                                            @if (@item.IsInStock)
-                                            {
-                                                <a asp-page="./Index" asp-page-handler="NotInStock" asp-route-id="@item.Id"
-                                                    class="btn btn-danger btn-sm"
-                                                   >اتمام موجودی</a>
-                                            }
-                                            else
-                                            {
-                                                <a asp-page="./Index" asp-page-handler="IsInStock" asp-route-id="@item.Id"
-                                                   class="btn btn-success btn-sm"
-                                                >موجود شد</a>
-                                            }
-                                            
+
                                         </td>
                                     </tr>
                                 }

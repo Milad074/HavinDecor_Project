@@ -20,7 +20,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Name" class="control-label">نام</label>
-                    <input type="text" class="form-control" asp-for="Name">
+                    <input type="text" class="form-control" asp-for="Name" onchange="makeSlug('Name', 'Slug')">
                     <span asp-validation-for="Name" class="error"></span>
                 </div>
             </div><div class="col-md-6">
@@ -34,12 +34,14 @@
 
         <div class="row">
             <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="UnitPrice" class="control-label">قیمت</label>
-                    <input class="form-control" asp-for="UnitPrice">
-                    <span asp-validation-for="UnitPrice" class="error"></span>
+                <div class="form-group no-margin">
+                    <label asp-for="ShortDescription" class="control-label">توضیحات کوتاه</label>
+                    <textarea class="form-control autogrow" asp-for="ShortDescription" onchange="fillField('ShortDescription', 'MetaDescription')"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="ShortDescription" class="error"></span>
                 </div>
-            </div><div class="col-md-6">
+            </div>
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Area" class="control-label">طول و عرض محصول</label>
                     <input type="text" class="form-control" asp-for="Area">
@@ -113,16 +115,6 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group no-margin">
-                    <label asp-for="ShortDescription" class="control-label">توضیحات کوتاه</label>
-                    <textarea class="form-control autogrow" asp-for="ShortDescription" onchange="fillField('ShortDescription', 'MetaDescription')"
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
-                    <span asp-validation-for="ShortDescription" class="error"></span>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group no-margin">
                     <label asp-for="Description" class="control-label">توضیحات</label>
                     <textarea class="form-control" asp-for="Description"
                               style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
@@ -131,17 +123,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Keywords" class="control-label">کلمات کلیدی</label>
                     <input type="text" class="form-control" asp-for="Keywords">
                     <span asp-validation-for="Keywords" class="error"></span>
                 </div>
             </div>
-
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="form-group no-margin">
                     <label asp-for="MetaDescription" class="control-label">توضیحات متا</label>
                     <textarea class="form-control autogrow" asp-for="MetaDescription"
@@ -150,8 +139,8 @@
                 </div>
             </div>
         </div>
-        
-        <input type="hidden" asp-for="Id" value="@Model.Id"/>
+
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>

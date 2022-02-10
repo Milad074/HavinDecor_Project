@@ -1621,6 +1621,81 @@
           "bin/placeholder/DiscountManagement.Infrastructure.EFCore.dll": {}
         }
       },
+      "InventoryManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "InventoryManagement.Application.Contracts": "1.0.0",
+          "InventoryManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InventoryManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InventoryManagement.Application.dll": {}
+        }
+      },
+      "InventoryManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "ShopManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InventoryManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InventoryManagement.Application.Contracts.dll": {}
+        }
+      },
+      "InventoryManagement.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "InventoryManagement.Application": "1.0.0",
+          "InventoryManagement.Application.Contracts": "1.0.0",
+          "InventoryManagement.Domain": "1.0.0",
+          "InventoryManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InventoryManagement.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InventoryManagement.Configuration.dll": {}
+        }
+      },
+      "InventoryManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "InventoryManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InventoryManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InventoryManagement.Domain.dll": {}
+        }
+      },
+      "InventoryManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "InventoryManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InventoryManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InventoryManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "ShopManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5998,6 +6073,31 @@
       "path": "../DiscountManagement.Infrastructure.EFCore/DiscountManagement.Infrastructure.EFCore.csproj",
       "msbuildProject": "../DiscountManagement.Infrastructure.EFCore/DiscountManagement.Infrastructure.EFCore.csproj"
     },
+    "InventoryManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../InventoryManagement.Application/InventoryManagement.Application.csproj",
+      "msbuildProject": "../InventoryManagement.Application/InventoryManagement.Application.csproj"
+    },
+    "InventoryManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../InventoryManagment.Application.Contracts/InventoryManagement.Application.Contracts.csproj",
+      "msbuildProject": "../InventoryManagment.Application.Contracts/InventoryManagement.Application.Contracts.csproj"
+    },
+    "InventoryManagement.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../InventoryManagement.Configuration/InventoryManagement.Configuration.csproj",
+      "msbuildProject": "../InventoryManagement.Configuration/InventoryManagement.Configuration.csproj"
+    },
+    "InventoryManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../InventoryManagment.Domain/InventoryManagement.Domain.csproj",
+      "msbuildProject": "../InventoryManagment.Domain/InventoryManagement.Domain.csproj"
+    },
+    "InventoryManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../InventoryManagement.Infrastracture.EFCore/InventoryManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../InventoryManagement.Infrastracture.EFCore/InventoryManagement.Infrastructure.EFCore.csproj"
+    },
     "ShopManagement.Application/1.0.0": {
       "type": "project",
       "path": "../ShopManagement.Application/ShopManagement.Application.csproj",
@@ -6027,6 +6127,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "DiscountManagement.Configuration >= 1.0.0",
+      "InventoryManagement.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.13",
       "ShopManagement.Configuration >= 1.0.0"
     ]
@@ -6068,6 +6169,9 @@
           "projectReferences": {
             "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\DiscountManagement.Configuration\\DiscountManagement.Configuration.csproj": {
               "projectPath": "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\DiscountManagement.Configuration\\DiscountManagement.Configuration.csproj"
+            },
+            "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\InventoryManagement.Configuration\\InventoryManagement.Configuration.csproj": {
+              "projectPath": "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\InventoryManagement.Configuration\\InventoryManagement.Configuration.csproj"
             },
             "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj": {
               "projectPath": "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj"

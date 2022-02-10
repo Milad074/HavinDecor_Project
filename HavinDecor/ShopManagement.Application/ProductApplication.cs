@@ -23,7 +23,7 @@ namespace ShopManagement.Application
                 return operation.Failed(ApplicationMessage.DuplicatedRecord);
             }
 
-            var product = new Product(command.Name, command.Code, command.UnitPrice, command.Material, command.Pieces,
+            var product = new Product(command.Name, command.Code, command.Material, command.Pieces,
                 command.Area, command.ShortDescription, command.Description, command.Picture, command.PictureAlt,
                 command.PictureTitle, command.CategoryId, command.Slug, command.Keywords, command.MetaDescription);
 
@@ -50,45 +50,9 @@ namespace ShopManagement.Application
                 return operation.Failed(ApplicationMessage.DuplicatedRecord);
             }
 
-            product.Edit(command.Name, command.Code, command.UnitPrice, command.Material, command.Pieces,
+            product.Edit(command.Name, command.Code, command.Material, command.Pieces,
                 command.Area, command.ShortDescription, command.Description, command.Picture, command.PictureAlt,
                 command.PictureTitle, command.CategoryId, command.Slug, command.Keywords, command.MetaDescription);
-
-            _productRepository.SaveChanges();
-
-            return operation.Succedded();
-        }
-
-        public OperationResult IsStock(long id)
-        {
-            var operation = new OperationResult();
-
-            var product = _productRepository.Get(id);
-
-            if (product == null)
-            {
-                return operation.Failed(ApplicationMessage.RecordNotFound);
-            }
-
-            product.InStock();
-
-            _productRepository.SaveChanges();
-
-            return operation.Succedded();
-        }
-
-        public OperationResult NOtInStock(long id)
-        {
-            var operation = new OperationResult();
-
-            var product = _productRepository.Get(id);
-
-            if (product == null)
-            {
-                return operation.Failed(ApplicationMessage.RecordNotFound);
-            }
-
-            product.NotInStock();
 
             _productRepository.SaveChanges();
 

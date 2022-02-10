@@ -11,10 +11,6 @@ namespace ShopManagement.Domain.ProductAgg
 
         public string Code { get; private set; }
 
-        public double UnitPrice { get; private set; }
-
-        public bool IsInStock { get; private set; }
-
         public string Material { get; private set; }
 
         public string Pieces { get; private set; }
@@ -43,7 +39,7 @@ namespace ShopManagement.Domain.ProductAgg
 
         public ProductCategory Category { get; private set; }
 
-        public Product(string name, string code, double unitPrice,
+        public Product(string name, string code,
             string material, string pieces, string area, string shortDescription,
             string description, string picture, string pictureAlt,
             string pictureTitle, long categoryId, string slug, string keywords,
@@ -51,32 +47,6 @@ namespace ShopManagement.Domain.ProductAgg
         {
             Name = name;
             Code = code;
-            UnitPrice = unitPrice;
-            Material = material;
-            Pieces = pieces;
-            Area = area;
-            ShortDescription = shortDescription;
-            Description = description;
-            Picture = picture;
-            PictureAlt = pictureAlt;
-            PictureTitle = pictureTitle;
-            CategoryId = categoryId;
-            Slug = slug;
-            Keywords = keywords;
-            MetaDescription = metaDescription;
-            IsInStock = true;
-        }
-
-
-        public void Edit(string name, string code, double unitPrice,
-            string material, string pieces, string area, string shortDescription,
-            string description, string picture, string pictureAlt,
-            string pictureTitle, long categoryId, string slug, string keywords,
-            string metaDescription)
-        {
-            Name = name;
-            Code = code;
-            UnitPrice = unitPrice;
             Material = material;
             Pieces = pieces;
             Area = area;
@@ -92,14 +62,26 @@ namespace ShopManagement.Domain.ProductAgg
         }
 
 
-        public void InStock()
+        public void Edit(string name, string code,
+            string material, string pieces, string area, string shortDescription,
+            string description, string picture, string pictureAlt,
+            string pictureTitle, long categoryId, string slug, string keywords,
+            string metaDescription)
         {
-            IsInStock = true;
-        }
-
-        public void NotInStock()
-        {
-            IsInStock = false;
+            Name = name;
+            Code = code;
+            Material = material;
+            Pieces = pieces;
+            Area = area;
+            ShortDescription = shortDescription;
+            Description = description;
+            Picture = picture;
+            PictureAlt = pictureAlt;
+            PictureTitle = pictureTitle;
+            CategoryId = categoryId;
+            Slug = slug;
+            Keywords = keywords;
+            MetaDescription = metaDescription;
         }
 
     }

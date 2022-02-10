@@ -12,11 +12,6 @@ namespace ShopManagement.Application.Contracts.Product
 
         public string Code { get;  set; }
 
-
-        [Range(1 , 100000000 , ErrorMessage = ValidationMessages.IsRequired)]
-        public double UnitPrice { get;  set; }
-
-
         public string Material { get;  set; }
 
 
