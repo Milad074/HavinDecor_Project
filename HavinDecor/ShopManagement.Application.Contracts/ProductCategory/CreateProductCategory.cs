@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using _0_Framework.Application;
 
 namespace ShopManagement.Application.Contracts.ProductCategory

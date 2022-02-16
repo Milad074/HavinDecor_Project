@@ -1,4 +1,7 @@
-﻿namespace _01_HavinDecorQuery.Contracts.productCategory
+﻿using System.Collections.Generic;
+using _01_HavinDecorQuery.Contracts.Product;
+
+namespace _01_HavinDecorQuery.Contracts.productCategory
 {
     public class ProductCategoryQueryModel
     {
@@ -8,5 +11,11 @@
         public string PictureAlt { get; set; }
         public string PictureTitle { get; set; }
         public string Slug { get; set; }
+        public string Description { get; set; }
+        public string MetaDescription { get; set; }
+        public string KeyWords { get; set; }
+
+        public List<ProductQueryModel> Products { get; set; }
+
     }
 }

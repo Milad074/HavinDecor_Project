@@ -24,7 +24,8 @@ namespace ShopManagement.Application
             }
 
             var productCategory = new ProductCategory(command.Name, command.Description, command.Picture,
-                command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, command.Slug);
+                command.PictureAlt, command.PictureTitle, command.Keywords,
+                command.MetaDescription, command.Slug);
 
             _productCategoryRepository.Create(productCategory);
 
@@ -51,13 +52,15 @@ namespace ShopManagement.Application
 
 
             productCategory.Edit(command.Name, command.Description, command.Picture,
-                command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, command.Slug);
+                command.PictureAlt, command.PictureTitle, command.Keywords,
+                command.MetaDescription, command.Slug);
 
             _productCategoryRepository.SaveChanges();
 
             return operation.Succedded();
 
         }
+
 
         public EditProductCategory GetDetails(long id)
         {
@@ -67,6 +70,11 @@ namespace ShopManagement.Application
         public List<ProductCategoryViewModel> GetProductCategories()
         {
             return _productCategoryRepository.GetProductCategories();
+        }
+
+        public List<ProductCategoryViewModel> GetSubCategories(long id)
+        {
+            return _productCategoryRepository.GetSubCategories(id);
         }
 
         public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel)

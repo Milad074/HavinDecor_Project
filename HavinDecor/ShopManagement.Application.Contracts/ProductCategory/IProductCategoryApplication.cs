@@ -13,6 +13,8 @@ namespace ShopManagement.Application.Contracts.ProductCategory
 
         List<ProductCategoryViewModel> GetProductCategories();
 
+        List<ProductCategoryViewModel> GetSubCategories(long id);
+
         List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel);
     }
 }

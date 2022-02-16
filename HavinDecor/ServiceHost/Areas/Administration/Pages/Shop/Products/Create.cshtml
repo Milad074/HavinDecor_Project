@@ -1,5 +1,7 @@
-﻿@model ShopManagement.Application.Contracts.Product.CreateProduct
+﻿@using ShopManagement.Application.Contracts.ProductCategory
+@model ShopManagement.Application.Contracts.Product.CreateProduct
 @{
+    var categories = (ProductCategoryViewModel)ViewData["Categories"];
 }
 
 
@@ -58,20 +60,35 @@
                     <input type="text" class="form-control" asp-for="Code">
                     <span asp-validation-for="Code" class="error"></span>
                 </div>
-            </div><div class="col-md-6">
+            </div>
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="CategoryId" class="control-label">گروه محصول</label>
-                    <select class="form-control" asp-for="CategoryId" 
-                                    asp-items='new  SelectList(Model.Categories , "Id" , "Name")'
-                            >
+                    <select class="form-control" asp-for="CategoryId"
+                            asp-items='new  SelectList(Model.Categories , "Id" , "Name")'
+                    >
                         <option value="0">
-                            انتخاب گروه محصول
+                            "گروه اصلی را انتخاب کنید"
                         </option>
                     </select>
                     <span asp-validation-for="CategoryId" class="error"></span>
                 </div>
             </div>
         </div>
+        @*<div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="SubCategories" class="control-label">گروه فرعی</label>
+                    <select class="form-control" asp-for="SubCategories"
+                            asp-items='new  SelectList(Model.SubCategories , "Id" , "Name")'>
+                        <option value="0">
+                            "گروه فرعی را انتخاب کنید"
+                        </option>
+                    </select>
+                    <span asp-validation-for="SubCategories" class="error"></span>
+                </div>
+            </div>
+        </div>*@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
@@ -114,14 +131,17 @@
             </div>
         </div>
         <div class="row">
-            
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="form-group no-margin">
                     <label asp-for="ShortDescription" class="control-label">توضیحات کوتاه</label>
                     <textarea class="form-control autogrow" asp-for="ShortDescription" onchange="fillField('ShortDescription', 'MetaDescription')"
                               style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
                     <span asp-validation-for="ShortDescription" class="error"></span>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div class="form-group no-margin">
                     <label asp-for="MetaDescription" class="control-label">توضیحات متا</label>
                     <textarea class="form-control autogrow" asp-for="MetaDescription"
@@ -147,3 +167,22 @@
         <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
     </div>
 </form>
+
+
+@section scripts{
+    <script>
+        $("#CategoryId").change(function () {
+            $("#SubCategories").empty();
+            $.getJSON("/Index/SubGroups/" + $("#CategoryId :selected").val(),
+                function (data) {
+
+                    $.each(data,
+                        function () {
+                            $("#SubCategories").append('<option value=' + this.value + '>' + this.text + '</option>');
+
+                        });
+
+                });
+        });
+    </script>
+}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Security.Cryptography.X509Certificates;
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using ShopManagement.Application.Contracts.ProductCategory;
@@ -17,6 +18,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         {
             _context = context;
         }
+
+        
 
         public EditProductCategory GetDetails(long id)
         {
@@ -36,12 +39,24 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
 
         public List<ProductCategoryViewModel> GetProductCategories()
         {
-            return _context.ProductCategories.Select(pc => new ProductCategoryViewModel
+            return _context.ProductCategories
+                .Where(x=> x.ParentId == null)
+                .Select(pc => new ProductCategoryViewModel
             {
                 Id = pc.Id,
-                Name = pc.Name
+                Name = pc.Name,
             }).ToList();
 
+        }
+
+        public List<ProductCategoryViewModel> GetSubCategories(long id)
+        {
+            return _context.ProductCategories.Where(x => x.ParentId == id)
+                .Select(x => new ProductCategoryViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name
+                }).ToList();
         }
 
         public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel)
@@ -51,7 +66,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 Id = pc.Id,
                 Name = pc.Name,
                 Picture = pc.Picture,
-                CreationDate = pc.CreationDate.ToFarsi()
+                CreationDate = pc.CreationDate.ToFarsi(),
+                ParentId = pc.ParentId
             });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
@@ -59,9 +75,12 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 query = query.Where(pc => pc.Name.Contains(searchModel.Name));
             }
 
+            if (searchModel.ParentId > 0)
+            {
+                query = query.Where(x => x.ParentId == searchModel.ParentId);
+            }
+
             return query.OrderByDescending(pc => pc.Id).ToList();
         }
-
-        
     }
 }

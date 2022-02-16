@@ -88,9 +88,14 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(350)
                         .HasColumnType("nvarchar(350)");
 
+                    b.Property<long?>("SubCategory")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("SubCategory");
 
                     b.ToTable("Products");
                 });
@@ -124,6 +129,9 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<long?>("ParentId")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Picture")
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
@@ -142,6 +150,8 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("nvarchar(300)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
 
                     b.ToTable("ProductCategories");
                 });
@@ -252,7 +262,20 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", "SubGroup")
+                        .WithMany("SubGroups")
+                        .HasForeignKey("SubCategory");
+
                     b.Navigation("Category");
+
+                    b.Navigation("SubGroup");
+                });
+
+            modelBuilder.Entity("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", b =>
+                {
+                    b.HasOne("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", null)
+                        .WithMany("ProductCategories")
+                        .HasForeignKey("ParentId");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductPictureAgg.ProductPicture", b =>
@@ -273,7 +296,11 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
 
             modelBuilder.Entity("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", b =>
                 {
+                    b.Navigation("ProductCategories");
+
                     b.Navigation("Products");
+
+                    b.Navigation("SubGroups");
                 });
 #pragma warning restore 612, 618
         }

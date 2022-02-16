@@ -3,7 +3,9 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Appli
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\bin\Debug\net5.0\ref\DiscountManagement.Application.Contracts.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\bin\Debug\net5.0\DiscountManagement.Application.Contracts.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\bin\Debug\net5.0\0_Framework.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\bin\Debug\net5.0\0_Framework.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\obj\Debug\net5.0\DiscountManagement.Application.Contracts.csproj.AssemblyReference.cache
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\obj\Debug\net5.0\DiscountManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\obj\Debug\net5.0\DiscountManagement.Application.Contracts.AssemblyInfoInputs.cache
@@ -13,5 +15,3 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Appli
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\obj\Debug\net5.0\DiscountManagement.Application.Contracts.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\obj\Debug\net5.0\ref\DiscountManagement.Application.Contracts.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\obj\Debug\net5.0\DiscountManagement.Application.Contracts.pdb
-C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
-C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\CustomerDiscount.Application.Contract\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using _0_Framework.Domain;
 using ShopManagement.Domain.ProductAgg;
 
@@ -14,8 +15,16 @@ namespace ShopManagement.Domain.ProductCategoryAgg
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
+        public long? ParentId { get; private set; }
 
+        [ForeignKey("ParentId")]
+        public List<ProductCategory> ProductCategories { get; private set; }
+
+        [InverseProperty("Category")]
         public List<Product> Products { get; private set; }
+
+        [InverseProperty("SubGroup")]
+        public List<Product> SubGroups { get; private set; }
 
         public ProductCategory()
         {

@@ -34,11 +34,13 @@
 
         <div class="row">
             <div class="col-md-6">
-                <div class="form-group no-margin">
-                    <label asp-for="ShortDescription" class="control-label">توضیحات کوتاه</label>
-                    <textarea class="form-control autogrow" asp-for="ShortDescription" onchange="fillField('ShortDescription', 'MetaDescription')"
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
-                    <span asp-validation-for="ShortDescription" class="error"></span>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Keywords" class="control-label">کلمات کلیدی</label>
+                        <input type="text" class="form-control" asp-for="Keywords">
+                        <span asp-validation-for="Keywords" class="error"></span>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -57,19 +59,34 @@
                     <input type="text" class="form-control" asp-for="Code">
                     <span asp-validation-for="Code" class="error"></span>
                 </div>
-            </div><div class="col-md-6">
+            </div>
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="CategoryId" class="control-label">گروه محصول</label>
                     <select class="form-control" asp-for="CategoryId"
                             asp-items='new  SelectList(Model.Categories , "Id" , "Name")'>
                         <option value="0">
-                            انتخاب گروه محصول
+                            "گروه اصلی را انتخاب کنید"
                         </option>
                     </select>
                     <span asp-validation-for="CategoryId" class="error"></span>
                 </div>
             </div>
         </div>
+        @*<div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="SubCategories" class="control-label">گروه فرعی</label>
+                        <select class="form-control" asp-for="SubCategories"
+                                asp-items='new  SelectList(Model.SubCategories , "Id" , "Name")'>
+                            <option value="0">
+                                "گروه فرعی را انتخاب کنید"
+                            </option>
+                        </select>
+                        <span asp-validation-for="SubCategories" class="error"></span>
+                    </div>
+                </div>
+            </div>*@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
@@ -111,7 +128,26 @@
                 </div>
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label asp-for="ShortDescription" class="control-label">توضیحات کوتاه</label>
+                    <textarea class="form-control autogrow" asp-for="ShortDescription" onchange="fillField('ShortDescription', 'MetaDescription')"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="ShortDescription" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label asp-for="MetaDescription" class="control-label">توضیحات متا</label>
+                    <textarea class="form-control autogrow" asp-for="MetaDescription"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="MetaDescription" class="error"></span>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group no-margin">
@@ -122,24 +158,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="Keywords" class="control-label">کلمات کلیدی</label>
-                    <input type="text" class="form-control" asp-for="Keywords">
-                    <span asp-validation-for="Keywords" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group no-margin">
-                    <label asp-for="MetaDescription" class="control-label">توضیحات متا</label>
-                    <textarea class="form-control autogrow" asp-for="MetaDescription"
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
-                    <span asp-validation-for="MetaDescription" class="error"></span>
-                </div>
-            </div>
-        </div>
-
         <input type="hidden" asp-for="Id" value="@Model.Id" />
     </div>
     <div class="modal-footer">

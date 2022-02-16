@@ -4,11 +4,13 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Co
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Configuration.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\0_Framework.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contracts.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\ShopManagement.Domain.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contracts.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.pdb
@@ -25,5 +27,3 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Co
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\obj\Debug\net5.0\InventoryManagement.Configuration.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\obj\Debug\net5.0\ref\InventoryManagement.Configuration.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\obj\Debug\net5.0\InventoryManagement.Configuration.pdb
-C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.dll
-C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.pdb

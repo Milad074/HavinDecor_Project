@@ -25,6 +25,7 @@ namespace ShopManagement.Infrastructure.EFCore.Mapping
             builder.HasMany(pc => pc.Products)
                 .WithOne(pc => pc.Category)
                 .HasForeignKey(pc => pc.CategoryId);
+
         }
     }
 }

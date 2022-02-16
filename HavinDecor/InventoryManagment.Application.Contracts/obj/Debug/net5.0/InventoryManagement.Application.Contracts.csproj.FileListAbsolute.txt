@@ -3,7 +3,9 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.App
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\bin\Debug\net5.0\ref\InventoryManagement.Application.Contracts.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\bin\Debug\net5.0\InventoryManagement.Application.Contracts.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\bin\Debug\net5.0\0_Framework.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\bin\Debug\net5.0\0_Framework.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.csproj.AssemblyReference.cache
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.AssemblyInfoInputs.cache
@@ -13,5 +15,3 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.App
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\obj\Debug\net5.0\ref\InventoryManagement.Application.Contracts.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.pdb
-C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
-C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\InventoryManagment.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb

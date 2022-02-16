@@ -2,6 +2,6 @@
 {
     public class ValidationMessages
     {
-        public const string IsRequired = "مقدار اینفیلد نمیتواند خالی باشد!!!";
+        public const string IsRequired = "مقدار این فیلد نمیتواند خالی باشد!!!";
     }
 }

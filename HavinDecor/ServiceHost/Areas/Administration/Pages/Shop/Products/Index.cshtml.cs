@@ -1,4 +1,9 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http.Json;
+using System.Security.Cryptography.X509Certificates;
+using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -17,6 +22,8 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
         public List<ProductViewModel> Products;
 
         public SelectList ProductCategories;
+
+        public List<ProductCategoryViewModel> SubGroups;
 
         private readonly IProductApplication _productApplication;
 
@@ -39,10 +46,12 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
 
         public IActionResult OnGetCreate()
         {
-            var command = new CreateProduct
+            var command = new CreateProduct()
             {
-                Categories = _productCategoryApplication.GetProductCategories()
+                Categories = _productCategoryApplication.GetProductCategories(),
+                //SubCategories = _productCategoryApplication.GetSubCategories(Convert.ToInt64(SubGroups.First().Id))
             };
+            
 
             return Partial("./Create", command);
         }
@@ -68,5 +77,16 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
 
             return new JsonResult(result);
         }
+
+        //public IActionResult ONGetSubGroups(int id)
+        //{
+        //    List<ProductCategoryViewModel> list = new List<ProductCategoryViewModel>()
+        //    {
+        //        new ProductCategoryViewModel(){Name = "",ParentId = 0}
+        //    };
+        //    list.AddRange(_productCategoryApplication.GetSubCategories(id));
+
+        //    return Partial("./Create", new SelectList(list, "Value", "Text"));
+        //}
     }
 }

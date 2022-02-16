@@ -25,7 +25,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
 
         public IActionResult OnGetCreate()
         {
-            return Partial("./Create", new CreateProductCategory());
+            return Partial("./Create",new CreateProductCategory());
         }
 
         public JsonResult OnPostCreate(CreateProductCategory command)

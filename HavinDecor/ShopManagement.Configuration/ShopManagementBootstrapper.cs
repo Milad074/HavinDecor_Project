@@ -1,4 +1,5 @@
 ﻿using System;
+using _01_HavinDecorQuery.Contracts.Product;
 using _01_HavinDecorQuery.Contracts.productCategory;
 using _01_HavinDecorQuery.Contracts.Slide;
 using _01_HavinDecorQuery.Query;
@@ -41,6 +42,8 @@ namespace ShopManagement.Configuration
             services.AddTransient<ISlideQuery, SlideQuery>();
 
             services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
+
+            services.AddTransient<IProductQuery, ProductQuery>();
 
             services.AddDbContext<ShopContext>(x => x.UseSqlServer(connectionString));
         }
