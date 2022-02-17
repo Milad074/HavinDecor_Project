@@ -139,3 +139,6 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\ref\ServiceHost.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\ServiceHost.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\ServiceHost.genruntimeconfig.cache
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\MainMenu\Default.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Footer\Default.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\Search.cshtml.g.cs

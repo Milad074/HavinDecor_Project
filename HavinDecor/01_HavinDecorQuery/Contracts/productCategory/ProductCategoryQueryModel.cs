@@ -14,6 +14,7 @@ namespace _01_HavinDecorQuery.Contracts.productCategory
         public string Description { get; set; }
         public string MetaDescription { get; set; }
         public string KeyWords { get; set; }
+        public long ParentId { get; set; }
 
         public List<ProductQueryModel> Products { get; set; }
 
