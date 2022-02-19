@@ -22,12 +22,12 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return _context.ProductPictures.Select(x => new EditProductPicture
             {
                 Id = x.Id,
-                Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 ProductId = x.ProductId
             }).FirstOrDefault(x => x.Id == id);
         }
+
 
         public List<ProductPictureViewModel> Search(ProductPictureSearchModel searchModel)
         {
@@ -49,6 +49,14 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             }
 
             return query.OrderByDescending(x => x.Id).ToList();
+        }
+
+        public ProductPicture GetProductPictureWithProductAndCategory(long id)
+        {
+            return _context.ProductPictures
+                .Include(x => x.Product)
+                .ThenInclude(x => x.Category)
+                .FirstOrDefault(x => x.Id == id);
         }
     }
 }

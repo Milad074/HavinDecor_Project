@@ -30,7 +30,6 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     Material = p.Material,
                     Pieces = p.Pieces,
                     Area = p.Area,
-                    Picture = p.Picture,
                     PictureAlt = p.PictureAlt,
                     PictureTitle = p.PictureTitle,
                     Slug = p.Slug,
@@ -80,6 +79,12 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 Id = x.Id,
                 Name = x.Name
             }).ToList();
+        }
+
+        public Product GetProductWithCategory(long id)
+        {
+            return _context.Products.Include(x => x.Category)
+                .FirstOrDefault(x => x.Id == id);
         }
     }
 }

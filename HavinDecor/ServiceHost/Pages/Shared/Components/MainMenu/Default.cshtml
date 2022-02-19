@@ -11,7 +11,7 @@
 <!-- logo -->
 <div class="logo">
     <a href="index.html">
-        <img src="~/assets/img/logo.png" class="img-fluid" alt="" />
+        <img src="~/assets/img/logo.png" class="img-fluid" alt="لوگو" />
     </a>
 </div>
 <!-- menu wrapper -->
@@ -19,89 +19,61 @@
     <nav>
         <ul>
             <li>
-                <a href="index.html">HOME</a>
+                <a asp-page="/Index">خانه</a>
             </li>
 
             <li class="menu-item-has-children">
-                <a href="#">PAGES</a>
+                <a href="">محصولات</a>
                 <ul class="sub-menu">
                     <li class="menu-item-has-children">
-                        <a href="#">Page List One</a>
+                        <a asp-page="/ProductCategory" asp-route-id="">پرده چاپی</a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="cart.html">Cart</a>
+                                <a href="cart.html">طرح گل</a>
                             </li>
                             <li>
-                                <a href="checkout.html">Checkout</a>
+                                <a href="checkout.html">طرح فانتزی</a>
                             </li>
                             <li>
-                                <a href="wishlist.html">Wishlist</a>
+                                <a href="wishlist.html">طرح چهره</a>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="#">page list two</a>
+                        <a asp-page="/ProductCategory">روتختی چاپی</a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="my-account.html">My Account</a>
+                                <a href="cart.html">طرح گل</a>
                             </li>
                             <li>
-                                <a href="login-register.html">Login Register</a>
+                                <a href="checkout.html">طرح فانتزی</a>
                             </li>
                             <li>
-                                <a href="faq.html">FAQ</a>
+                                <a href="wishlist.html">طرح چهره</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Page list three</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="compare.html">Compare</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
-                            <li>
-                                <a href="about.html">About Us</a>
-                            </li>
-                        </ul>
-                    </li>
+
                 </ul>
             </li>
 
             <li class="menu-item-has-children">
-                <a href="blog-left-sidebar.html">BLOG</a>
+                <a href="blog-left-sidebar.html">مقالات</a>
                 <ul class="sub-menu">
                     <li>
-                        <a href="blog-left-sidebar.html">Blog Left Sidebar</a>
+                        <a href="blog-left-sidebar.html">گروه 1</a>
                     </li>
                     <li>
-                        <a href="blog-right-sidebar.html">Blog Right Sidebar</a>
-                    </li>
-                    <li>
-                        <a href="blog-post-left-sidebar.html">Blog Post Left Sidebar</a>
-                    </li>
-                    <li>
-                        <a href="blog-post-right-sidebar.html">Blog Post Right Sidebar</a>
-                    </li>
-                    <li>
-                        <a href="blog-post-image-format.html">Blog Post Image Format</a>
-                    </li>
-                    <li>
-                        <a href="blog-post-image-gallery.html">Blog Post Image Gallery</a>
-                    </li>
-                    <li>
-                        <a href="blog-post-audio-format.html">Blog Post Audio Format</a>
-                    </li>
-                    <li>
-                        <a href="blog-post-video-format.html">Blog Post Video Format</a>
+                        <a href="blog-right-sidebar.html">گروه 2</a>
                     </li>
                 </ul>
             </li>
 
             <li>
-                <a href="contact.html">CONTACT</a>
+                <a asp-page="/ContactUs">تماس با ما</a>
+            </li>
+            <li>
+                <a asp-page="/AboutUs">درباره ما</a>
             </li>
         </ul>
     </nav>
@@ -223,50 +195,16 @@
                 <div class="settings-menu-wrapper"
                      id="settings-menu-wrapper">
                     <div class="single-settings-block">
-                        <h4 class="title">MY ACCOUNT</h4>
+                        <h4 class="title">پروفایل من</h4>
                         <ul>
                             <li>
-                                <a href="login-register.html">Register</a>
+                                <a href="login-register.html">ثبت نام</a>
                             </li>
                             <li>
-                                <a href="login-register.html">Login</a>
+                                <a href="login-register.html">ورود</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="single-settings-block">
-                        <h4 class="title">My Account</h4>
-                        <ul>
-                            <li>
-                                <a href="javascript:void(0)">Show Account</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Edit Account</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Change Password</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">My Wallet</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- <div class="single-settings-block">
-                        <h4 class="title">LANGUAGE: EN-GB</h4>
-                        <ul>
-                            <li>
-                                <a href="javascript:void(0)"
-                                ><img src="~/assets/img/icons/en-gb.png" alt="" />
-                                    English</a
-                                >
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)"
-                                ><img src="~/assets/img/icons/de-de.png" alt="" />
-                                    Germany
-                                </a>
-                            </li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
         </li>
@@ -328,8 +266,8 @@
     <div class="offcanvas-wrapper">
         <div class="offcanvas-inner-content">
             <div class="offcanvas-mobile-search-area">
-                <form action="#">
-                    <input type="search" placeholder="Search ..." />
+                <form method="get" asp-page="/Search">
+                    <input type="search" name="value" id="value" placeholder="جستوجو" />
                     <button type="submit">
                         <i class="fa fa-search"></i>
                     </button>
@@ -337,172 +275,39 @@
             </div>
             <nav class="offcanvas-navigation">
                 <ul>
-                    <li class="menu-item-has-children">
-                        <a href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="index.html">Home 01</a>
-                            </li>
-                            <li>
-                                <a href="index-2.html">Home 02</a>
-                            </li>
-                            <li>
-                                <a href="index-3.html">Home 03</a>
-                            </li>
-                        </ul>
+                    <li class="">
+                        <a asp-page="/Index">خانه</a>
+                        
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
+                        <a href="#">محصولات</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children">
-                                <a href="#">Page List One</a>
+                                <a href="#">پرده چاپی</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="cart.html">Cart</a>
+                                        <a href="cart.html">طرح گل</a>
                                     </li>
                                     <li>
-                                        <a href="checkout.html">Checkout</a>
+                                        <a href="checkout.html">طرح فانتزی</a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html">Wishlist</a>
+                                        <a href="wishlist.html">طرح چهره</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Page List Two</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="my-account.html">My Account</a>
-                                    </li>
-                                    <li>
-                                        <a href="login-register.html">Login Register</a>
-                                    </li>
-                                    <li>
-                                        <a href="faq.html">FAQ</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Page List Three</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="compare.html">Compare</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">About Us</a>
-                                    </li>
-                                </ul>
-                            </li>
+                            
                         </ul>
                     </li>
+                    
                     <li class="menu-item-has-children">
-                        <a href="#">Shop</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children">
-                                <a href="#">Shop Grid</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="shop-3-column.html">shop 3 column</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-4-column.html">shop 4 column</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-left-sidebar.html">shop left sidebar</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-right-sidebar.html">shop right sidebar</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Shop List</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="shop-list.html">shop List</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-list-left-sidebar.html">shop List Left Sidebar</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-list-right-sidebar.html">shop List Right Sidebar</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Single Product One</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="single-product.html">Single Product</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product-variable.html">Single Product variable</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product-affiliate.html">Single Product affiliate</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product-group.html">Single Product group</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product-tabstyle-2.html">Tab Style 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product-tabstyle-3.html">Tab Style 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Single Product Two</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="single-product-gallery-left.html">Gallery Left</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product-gallery-right.html">Gallery Right</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product-sticky-left.html">Sticky Left</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product-sticky-right.html">Sticky Right</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-product-slider-box.html">Slider Box</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blog</a>
+                        <a href="#">بلاگ</a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="blog-left-sidebar.html">Blog Left Sidebar</a>
+                                <a href="blog-left-sidebar.html">گروه 1</a>
                             </li>
                             <li>
-                                <a href="blog-right-sidebar.html">Blog Right Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="blog-post-left-sidebar.html">Blog Post Left Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="blog-post-right-sidebar.html">Blog Post Right Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="blog-post-image-format.html">Blog Post Image Format</a>
-                            </li>
-                            <li>
-                                <a href="blog-post-image-gallery.html">Blog Post Image Gallery</a>
-                            </li>
-                            <li>
-                                <a href="blog-post-audio-format.html">Blog Post Audio Format</a>
-                            </li>
-                            <li>
-                                <a href="blog-post-video-format.html">Blog Post Video Format</a>
+                                <a href="blog-left-sidebar.html">گروه 2</a>
                             </li>
                         </ul>
                     </li>
@@ -513,44 +318,17 @@
                 <nav class="offcanvas-navigation">
                     <ul>
                         <li class="menu-item-has-children">
-                            <a href="#">MY ACCOUNT </a>
+                            <a href="#">پروفایل من</a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="login-register.html">Register</a>
+                                    <a href="login-register.html">ثبت نام</a>
                                 </li>
                                 <li>
-                                    <a href="login-register.html">Login</a>
+                                    <a href="login-register.html">ورود</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">CURRENCY: USD </a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="javascript:void(0)">€ Euro</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">$ US Dollar</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">LANGUAGE: EN-GB </a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <img src="~/assets/img/icons/en-gb.png" alt="" />
-                                        English
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <img src="~/assets/img/icons/de-de.png" alt="" />
-                                        Germany
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                        
                     </ul>
                 </nav>
             </div>

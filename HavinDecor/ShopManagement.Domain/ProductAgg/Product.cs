@@ -83,7 +83,10 @@ namespace ShopManagement.Domain.ProductAgg
             Area = area;
             ShortDescription = shortDescription;
             Description = description;
-            Picture = picture;
+
+            if(!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
+
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             CategoryId = categoryId;

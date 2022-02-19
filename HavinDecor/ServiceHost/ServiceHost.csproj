@@ -17,4 +17,8 @@
     <ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Pictures\" />
+  </ItemGroup>
+
 </Project>

@@ -46,6 +46,11 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Slides
 
         public JsonResult OnPostEdit(EditSlide command)
         {
+            if (ModelState.IsValid)
+            {
+                
+            }
+
             var result = _slideApplication.Edit(command);
 
             return new JsonResult(result);

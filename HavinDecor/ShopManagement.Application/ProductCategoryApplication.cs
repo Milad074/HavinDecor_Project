@@ -9,9 +9,12 @@ namespace ShopManagement.Application
     {
         private readonly IProductCategoryRepository _productCategoryRepository;
 
-        public ProductCategoryApplication(IProductCategoryRepository productCategoryRepository)
+        private readonly IFileUploader _fileUploader;
+
+        public ProductCategoryApplication(IProductCategoryRepository productCategoryRepository, IFileUploader fileUploader)
         {
             _productCategoryRepository = productCategoryRepository;
+            _fileUploader = fileUploader;
         }
 
         public OperationResult Create(CreateProductCategory command)
@@ -23,7 +26,10 @@ namespace ShopManagement.Application
                 return operation.Failed(ApplicationMessage.DuplicatedRecord);
             }
 
-            var productCategory = new ProductCategory(command.Name, command.Description, command.Picture,
+            var picturePath = $"{command.Slug}";
+            var fileName = _fileUploader.Upload(command.Picture, picturePath);
+
+            var productCategory = new ProductCategory(command.Name, command.Description, fileName,
                 command.PictureAlt, command.PictureTitle, command.Keywords,
                 command.MetaDescription, command.Slug);
 
@@ -50,8 +56,10 @@ namespace ShopManagement.Application
                 return operation.Failed(ApplicationMessage.DuplicatedRecord);
             }
 
+            var picturePath = $"{command.Slug}";
+            var fileName = _fileUploader.Upload(command.Picture, picturePath);
 
-            productCategory.Edit(command.Name, command.Description, command.Picture,
+            productCategory.Edit(command.Name, command.Description,fileName ,
                 command.PictureAlt, command.PictureTitle, command.Keywords,
                 command.MetaDescription, command.Slug);
 

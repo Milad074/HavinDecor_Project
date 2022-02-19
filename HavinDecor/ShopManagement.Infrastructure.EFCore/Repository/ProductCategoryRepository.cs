@@ -28,7 +28,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 Id = pc.Id,
                 Name = pc.Name,
                 Description = pc.Description,
-                Picture = pc.Picture,
+                //Picture = pc.Picture,
                 PictureAlt = pc.PictureAlt,
                 PictureTitle = pc.PictureTitle,
                 Keywords = pc.Keywords,
@@ -48,6 +48,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             }).ToList();
 
         }
+
+        
 
         public List<ProductCategoryViewModel> GetSubCategories(long id)
         {
@@ -81,6 +83,13 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             }
 
             return query.OrderByDescending(pc => pc.Id).ToList();
+        }
+
+        public string GetSlugById(long id)
+        {
+            return _context.ProductCategories
+                .Select(x => new {x.Id, x.Slug}).FirstOrDefault(x => x.Id == id)
+                ?.Slug;
         }
     }
 }

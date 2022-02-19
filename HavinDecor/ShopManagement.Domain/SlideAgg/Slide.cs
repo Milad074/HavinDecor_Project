@@ -42,7 +42,9 @@ namespace ShopManagement.Domain.SlideAgg
             string pictureTitle, string heading, string title,
             string text, string btnText, string btnColor , string link)
         {
-            Picture = picture;
+            if(!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
+
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             Heading = heading;

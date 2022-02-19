@@ -269,7 +269,7 @@ select {
 =============================================*/
 
 .header-area {
-	background-color: #fff;
+	background-color: #01768b;
 }
 
 .header-area--transparent-color {
@@ -448,14 +448,14 @@ select {
 	transition: .3s;
 	-webkit-animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
 	animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
-	background: rgba(255, 255, 255, .7);
+	background: rgba(1, 118, 139, .7);
 	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .1);
 	box-shadow: 0 0 2px rgba(0, 0, 0, .1);
 }
 
-.header-area.is-sticky:hover {
-	background-color: #fff;
-}
+	.header-area.is-sticky:hover {
+		background-color: rgb(1, 118, 139);
+	}
 
 .header-area.is-sticky .navigation-menu-wrapper nav > ul > li > a {
 	padding: 0;
@@ -504,11 +504,11 @@ select {
 	margin-right: 0;
 }
 
-.navigation-menu-wrapper nav > ul > li.active > a,
-.navigation-menu-wrapper nav > ul > li:hover > a {
-	position: relative;
-	color: #e33;
-}
+	.navigation-menu-wrapper nav > ul > li.active > a,
+	.navigation-menu-wrapper nav > ul > li:hover > a {
+		position: relative;
+		color: #fd7e14;
+	}
 
 .navigation-menu-wrapper nav > ul > li.menu-item-has-children > a::after {
 	font-family: Ionicons;
@@ -526,8 +526,8 @@ select {
 	line-height: 26px;
 	line-height: 55px;
 	display: block;
-	padding: 20px 0;
-	color: #342a2a;
+	padding: 0;
+	color: #fff;
 }
 
 .navigation-menu-wrapper nav > ul > li:hover > .sub-menu,
@@ -746,7 +746,7 @@ select {
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 28px;
-	color: #292929;
+	color: #fff;
 }
 
 .header-icon-wrapper > ul > li a:hover {
@@ -760,17 +760,17 @@ select {
 	display: inline-block;
 }
 
-.header-cart-icon .counter {
-	font-size: 12px;
-	line-height: 18px;
-	position: absolute;
-	top: -5px;
-	left: 100%;
-	width: 18px;
-	height: 18px;
-	color: #e33;
-	border-radius: 100%;
-}
+	.header-cart-icon .counter {
+		font-size: 12px;
+		line-height: 18px;
+		position: absolute;
+		top: -5px;
+		left: 100%;
+		width: 18px;
+		height: 18px;
+        color: #fd7e14;
+		border-radius: 100%;
+	}
 
 .header-cart-icon .mini-cart {
 	position: absolute;

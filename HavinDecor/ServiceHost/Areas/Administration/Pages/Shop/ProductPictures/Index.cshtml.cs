@@ -62,6 +62,11 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPictures
 
         public JsonResult OnPostEdit(EditProductPicture command)
         {
+            if (ModelState.IsValid)
+            {
+                
+            }
+
             var result = _productPictureApplication.Edit(command);
 
             return new JsonResult(result);
