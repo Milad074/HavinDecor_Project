@@ -80,12 +80,11 @@
                                                             }
                                                             @*<span class="new">New</span>*@
                                                         </div>
-                                                        <a asp-page="/Produt" asp-route-id="@product.Slug">
-                                                            <img src="@product.Picture" class="img-fluid"
+                                                        <a asp-page="/Product" asp-route-id="@product.Slug">
+
+                                                            <img src="~/Pictures/@product.Picture" class="img-fluid"
                                                                  alt="@product.PictureAlt"
                                                                  title="@product.PictureTitle">
-                                                            @*<img src="assets/img/products/1_1-600x800.jpg" class="img-fluid"
-                                                                 alt="">*@
                                                         </a>
 
                                                         <div class="hover-icons">
@@ -115,7 +114,7 @@
                                                         </div>
 
                                                         <h3 class="single-grid-product__title">
-                                                            <a asp-page="/ProductDetails">
+                                                            <a asp-page="/Product" asp-route-id="@product.Slug">
                                                                 @product.Name
                                                             </a>
                                                         </h3>

@@ -5,22 +5,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <!--=======  section title  =======-->
                 <div class="section-title-wrapper text-center section-space--half">
                     <h2 class="section-title">دسته بندی محصولات</h2>
                     <p class="section-subtitle">
                         با محصولات هاوین دکور زیبایی خانه ی خودر را بیشتر کنید
                     </p>
                 </div>
-                <!--=======  End of section title  =======-->
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <!--=======  tab slider wrapper  =======-->
 
                 <div class="tab-slider-wrapper">
-                    <!--=======  tab product navigation  =======-->
 
                     <div class="tab-product-navigation">
                         <div class="nav nav-tabs justify-content-center"
@@ -38,8 +34,6 @@
                         </div>
                     </div>
 
-                    <!--=======  End of tab product navigation  =======-->
-                    <!--=======  tab product content  =======-->
                     <div class="tab-content">
                         @foreach (var category in Model)
                         {
@@ -47,7 +41,6 @@
                                  id="product-series-@category.Id"
                                  role="tabpanel"
                                  aria-labelledby="product-tab-@category.Id">
-                                <!--=======  single row slider wrapper  =======-->
                                 <div class="single-row-slider-wrapper">
                                     <div class="ht-slick-slider"
                                          data-slick-setting='{
@@ -73,7 +66,6 @@
                                         @foreach (var product in category.Products)
                                         {
                                             <div class="col">
-                                                <!--=======  single grid product  =======-->
                                                 <div class="single-grid-product">
                                                     <div class="single-grid-product__image">
                                                         @if (product.HasDiscount)
@@ -82,8 +74,8 @@
                                                                 <span class="sale">%@product.DiscountRate-</span>
                                                             </div>
                                                         }
-                                                        <a href="single-product.html">
-                                                            <img src="@product.Picture"
+                                                        <a asp-page="/Product" asp-route-id="@product.Slug">
+                                                            <img src="~/Pictures/@product.Picture"
                                                                  alt="@product.PictureAlt"
                                                                  title="@product.PictureTitle"
                                                                  class="img-fluid"/>
@@ -109,7 +101,8 @@
                                                     <div class="single-grid-product__content">
                                                         <div class="single-grid-product__category-rating">
                                                             <span class="category">
-                                                                <a href="shop-left-sidebar.html">@product.Category</a>
+                                                                <a asp-page="/ProductCategory" asp-route-id="@product.CategorySlug"
+                                                                    >@product.Category</a>
                                                             </span>
                                                             <span class="rating">
                                                                 <i class="ion-android-star active"></i>
@@ -121,7 +114,9 @@
                                                         </div>
 
                                                         <h3 class="single-grid-product__title">
-                                                            <a href="single-product.html">@product.Name</a>
+                                                            <a asp-page="/Product" asp-route-id="@product.Slug" >
+                                                                @product.Name
+                                                            </a>
                                                         </h3>
                                                         <p class="single-grid-product__price">
                                                             @if (product.HasDiscount)
@@ -138,20 +133,16 @@
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <!--=======  End of single grid product  =======-->
                                             </div>
                                         }
 
                                     </div>
                                 </div>
-                                <!--=======  End of single row slider wrapper  =======-->
                             </div>
                         }
                     </div>
-                    <!--=======  End of tab product content  =======-->
                 </div>
 
-                <!--=======  End of tab slider wrapper  =======-->
             </div>
         </div>
     </div>

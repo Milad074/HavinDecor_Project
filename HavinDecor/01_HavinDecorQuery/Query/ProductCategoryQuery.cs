@@ -35,7 +35,7 @@ namespace _01_HavinDecorQuery.Query
             {
                 Id = x.Id,
                 Name = x.Name,
-                //Picture = x.Picture,
+                Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 Slug = x.Slug
@@ -153,6 +153,7 @@ namespace _01_HavinDecorQuery.Query
                 PictureAlt = product.PictureAlt,
                 PictureTitle = product.PictureTitle,
                 Category = product.Category.Name,
+                CategorySlug = product.Category.Slug,
                 Slug = product.Slug
             }).ToList();
         }

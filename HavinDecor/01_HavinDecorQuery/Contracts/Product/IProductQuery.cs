@@ -6,5 +6,6 @@ namespace _01_HavinDecorQuery.Contracts.Product
     {
         List<ProductQueryModel> GetLatestArrivals();
         List<ProductQueryModel> Search(string value);
+        ProductQueryModel GetDetails(string slug);
     }
 }

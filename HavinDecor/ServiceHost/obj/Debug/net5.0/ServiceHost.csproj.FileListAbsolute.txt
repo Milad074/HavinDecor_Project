@@ -146,3 +146,4 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\System.IO.Pipelines.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\Product.cshtml.g.cs

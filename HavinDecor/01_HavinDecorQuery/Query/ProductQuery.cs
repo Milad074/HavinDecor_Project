@@ -6,6 +6,7 @@ using _01_HavinDecorQuery.Contracts.Product;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
+using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagement.Infrastructure.EFCore;
 
 namespace _01_HavinDecorQuery.Query
@@ -25,6 +26,72 @@ namespace _01_HavinDecorQuery.Query
             _discountContext = discountContext;
         }
 
+        public ProductQueryModel GetDetails(string slug)
+        {
+            var inventory = _inventoryContext.Inventory
+                .Select(x => new { x.ProductId, x.UnitPrice }).ToList();
+
+            var discount = _discountContext.CustomerDiscounts
+                .Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now)
+                .Select(x => new { x.ProductId, x.DiscountRate  , x.EndDate});
+
+            var product = _context.Products
+                .Include(x=> x.Category)
+                .Include(x=> x.ProductPictures)
+                .Select(x => new ProductQueryModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Category = x.Category.Name,
+                    Picture = x.Picture,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle,
+                    Slug = x.Slug,
+                    CategorySlug = x.Category.Slug,
+                    Code = x.Code,
+                    Material = x.Material,
+                    Description = x.Description,
+                    ShortDescription = x.ShortDescription,
+                    KeyWords = x.Keywords,
+                    MetaDescription = x.MetaDescription,
+                    ProductPictures = MapProductPicture(x.ProductPictures)
+                }).FirstOrDefault(x => x.Slug == slug);
+
+
+            if (product == null)
+            {
+                return new ProductQueryModel();
+            }
+
+            var productInventory = inventory
+                .FirstOrDefault(x => x.ProductId == product.Id);
+
+            if (productInventory != null)
+            {
+                var price = productInventory.UnitPrice;
+                product.Price = price.ToMoney();
+
+                
+
+                var discountRate =
+                    discount.FirstOrDefault(x => x.ProductId == product.Id);
+
+                if (discountRate != null)
+                {
+                    product.EndDate = discountRate.EndDate.ToDiscountFormat();
+                    int productDiscount = discountRate.DiscountRate;
+                    product.DiscountRate = productDiscount;
+                    product.HasDiscount = productDiscount > 0;
+                    var discountAmount = Math.Round((price * productDiscount) / 100);
+
+                    product.PriceWithDiscount = (price - discountAmount).ToMoney();
+                }
+            }
+            
+            return product;
+        }
+
+
         public List<ProductQueryModel> GetLatestArrivals()
         {
             var inventory = _inventoryContext.Inventory
@@ -40,6 +107,7 @@ namespace _01_HavinDecorQuery.Query
                     Id = x.Id,
                     Name = x.Name,
                     Category = x.Category.Name,
+                    CategorySlug = x.Category.Slug,
                     Picture = x.Picture,
                     PictureAlt = x.PictureAlt,
                     PictureTitle = x.PictureTitle,
@@ -131,5 +199,19 @@ namespace _01_HavinDecorQuery.Query
             }
             return products;
         }
+
+        private static List<ProductPictureQueryModel> MapProductPicture(List<ProductPicture> productPictures)
+        {
+            return productPictures
+                .Select(x => new ProductPictureQueryModel
+                {
+                    ProductId = x.Id,
+                    IsRemoved = x.IsRemoved,
+                    Picture = x.Picture,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle
+                }).Where(x => !x.IsRemoved).ToList();
+        }
+
     }
 }
