@@ -13,15 +13,6 @@ namespace ShopManagement.Application.Contracts.Product
 
         public string Code { get;  set; }
 
-        public string Material { get;  set; }
-
-
-        public string Pieces { get;  set; }
-
-
-        public string Area { get;  set; }
-
-
         public string ShortDescription { get;  set; }
 
         public string Description { get;  set; }

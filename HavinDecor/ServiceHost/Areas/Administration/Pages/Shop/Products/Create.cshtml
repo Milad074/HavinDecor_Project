@@ -32,41 +32,13 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-md-6">
-                
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label asp-for="Keywords" class="control-label">کلمات کلیدی</label>
-                        <input type="text" class="form-control" asp-for="Keywords">
-                        <span asp-validation-for="Keywords" class="error"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="Area" class="control-label">طول و عرض محصول</label>
-                    <input type="text" class="form-control" asp-for="Area">
-                    <span asp-validation-for="Area" class="error"></span>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="Code" class="control-label">کد محصول</label>
-                    <input type="text" class="form-control" asp-for="Code">
-                    <span asp-validation-for="Code" class="error"></span>
-                </div>
-            </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="CategoryId" class="control-label">گروه محصول</label>
                     <select class="form-control" asp-for="CategoryId"
-                            asp-items='new  SelectList(Model.Categories , "Id" , "Name")'
-                    >
+                            asp-items='new  SelectList(Model.Categories , "Id" , "Name")'>
                         <option value="0">
                             "گروه اصلی را انتخاب کنید"
                         </option>
@@ -114,19 +86,19 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="Material" class="control-label">جنس پارچه</label>
-                    <input type="text" class="form-control" asp-for="Material">
-                    <span asp-validation-for="Material" class="error"></span>
+                    <label asp-for="Keywords" class="control-label">کلمات کلیدی</label>
+                    <input type="text" class="form-control" asp-for="Keywords">
+                    <span asp-validation-for="Keywords" class="error"></span>
                 </div>
-            </div><div class="col-md-6">
+            </div>
+            <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="Pieces" class="control-label">تعداد تکه های محصول</label>
-                    <input type="text" class="form-control" asp-for="Pieces">
-                    <span asp-validation-for="Pieces" class="error"></span>
+                    <label asp-for="Code" class="control-label">کد محصول</label>
+                    <input type="text" class="form-control" asp-for="Code">
+                    <span asp-validation-for="Code" class="error"></span>
                 </div>
             </div>
         </div>
@@ -160,7 +132,7 @@
                 </div>
             </div>
         </div>
-       
+
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShopManagement.Domain.MaterialAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
@@ -16,6 +17,8 @@ namespace ShopManagement.Infrastructure.EFCore
         public DbSet<ProductCategory> ProductCategories { get; set; }
 
         public DbSet<Slide> Slides { get; set; }
+
+        public DbSet<Material> Materials { get; set; }
 
         public ShopContext(DbContextOptions<ShopContext> options) :base(options)
         {

@@ -12,6 +12,7 @@ namespace InventoryManagement.Domain.InventoryAgg
 
         public bool InStoke { get; private set; }
 
+
         public List<InventoryOperation> Operations { get; private set; }
 
         public Inventory(long productId, double unitPrice)
@@ -59,5 +60,6 @@ namespace InventoryManagement.Domain.InventoryAgg
 
             InStoke = currentCount > 0; 
         }
+
     }
 }

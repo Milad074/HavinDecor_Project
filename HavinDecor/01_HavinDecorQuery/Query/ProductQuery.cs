@@ -49,7 +49,6 @@ namespace _01_HavinDecorQuery.Query
                     Slug = x.Slug,
                     CategorySlug = x.Category.Slug,
                     Code = x.Code,
-                    Material = x.Material,
                     Description = x.Description,
                     ShortDescription = x.ShortDescription,
                     KeyWords = x.Keywords,

@@ -31,35 +31,8 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-md-6">
 
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label asp-for="Keywords" class="control-label">کلمات کلیدی</label>
-                        <input type="text" class="form-control" asp-for="Keywords">
-                        <span asp-validation-for="Keywords" class="error"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="Area" class="control-label">طول و عرض محصول</label>
-                    <input type="text" class="form-control" asp-for="Area">
-                    <span asp-validation-for="Area" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="Code" class="control-label">کد محصول</label>
-                    <input type="text" class="form-control" asp-for="Code">
-                    <span asp-validation-for="Code" class="error"></span>
-                </div>
-            </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="CategoryId" class="control-label">گروه محصول</label>
@@ -74,24 +47,24 @@
             </div>
         </div>
         @*<div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label asp-for="SubCategories" class="control-label">گروه فرعی</label>
-                        <select class="form-control" asp-for="SubCategories"
-                                asp-items='new  SelectList(Model.SubCategories , "Id" , "Name")'>
-                            <option value="0">
-                                "گروه فرعی را انتخاب کنید"
-                            </option>
-                        </select>
-                        <span asp-validation-for="SubCategories" class="error"></span>
-                    </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="SubCategories" class="control-label">گروه فرعی</label>
+                    <select class="form-control" asp-for="SubCategories"
+                            asp-items='new  SelectList(Model.SubCategories , "Id" , "Name")'>
+                        <option value="0">
+                            "گروه فرعی را انتخاب کنید"
+                        </option>
+                    </select>
+                    <span asp-validation-for="SubCategories" class="error"></span>
                 </div>
-            </div>*@
+            </div>
+        </div>*@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label asp-for="Picture" class="control-label">عکس</label>
-                    <input type="file" class="form-control" asp-for="Picture"  accept=".jpeg , .jpg , .png">
+                    <input type="file" class="form-control" asp-for="Picture" accept=".jpeg , .jpg , .png" required>
                     <span asp-validation-for="Picture" class="error"></span>
                 </div>
             </div>
@@ -112,19 +85,19 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="Material" class="control-label">جنس پارچه</label>
-                    <input type="text" class="form-control" asp-for="Material">
-                    <span asp-validation-for="Material" class="error"></span>
+                    <label asp-for="Keywords" class="control-label">کلمات کلیدی</label>
+                    <input type="text" class="form-control" asp-for="Keywords">
+                    <span asp-validation-for="Keywords" class="error"></span>
                 </div>
-            </div><div class="col-md-6">
+            </div>
+            <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="Pieces" class="control-label">تعداد تکه های محصول</label>
-                    <input type="text" class="form-control" asp-for="Pieces">
-                    <span asp-validation-for="Pieces" class="error"></span>
+                    <label asp-for="Code" class="control-label">کد محصول</label>
+                    <input type="text" class="form-control" asp-for="Code">
+                    <span asp-validation-for="Code" class="error"></span>
                 </div>
             </div>
         </div>

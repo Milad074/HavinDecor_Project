@@ -12,11 +12,6 @@ namespace ShopManagement.Domain.ProductAgg
 
         public string Code { get; private set; }
 
-        public string Material { get; private set; }
-
-        public string Pieces { get; private set; }
-
-        public string Area { get; private set; }
 
         public string ShortDescription { get; private set; }
 
@@ -47,17 +42,13 @@ namespace ShopManagement.Domain.ProductAgg
         [ForeignKey("SubCategory")]
         public ProductCategory SubGroup { get; private set; }
 
-        public Product(string name, string code,
-            string material, string pieces, string area, string shortDescription,
+        public Product(string name, string code, string shortDescription,
             string description, string picture, string pictureAlt,
             string pictureTitle, long categoryId, string slug, string keywords,
             string metaDescription)
         {
             Name = name;
             Code = code;
-            Material = material;
-            Pieces = pieces;
-            Area = area;
             ShortDescription = shortDescription;
             Description = description;
             Picture = picture;
@@ -70,17 +61,13 @@ namespace ShopManagement.Domain.ProductAgg
         }
 
 
-        public void Edit(string name, string code,
-            string material, string pieces, string area, string shortDescription,
+        public void Edit(string name, string code, string shortDescription,
             string description, string picture, string pictureAlt,
             string pictureTitle, long categoryId, string slug, string keywords,
             string metaDescription)
         {
             Name = name;
             Code = code;
-            Material = material;
-            Pieces = pieces;
-            Area = area;
             ShortDescription = shortDescription;
             Description = description;
 

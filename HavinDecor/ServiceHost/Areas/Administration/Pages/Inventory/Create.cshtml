@@ -19,9 +19,8 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label asp-for="ProductId" class="control-label"> محصول</label>
-                    <select class="form-control" asp-for="ProductId" 
-                            asp-items='new  SelectList(Model.Products , "Id" , "Name")'
-                    >
+                    <select class="form-control" asp-for="ProductId"
+                            asp-items='new  SelectList(Model.Products , "Id" , "Name")'>
                         <option value="0">
                             انتخاب محصول
                         </option>
@@ -30,12 +29,11 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label asp-for="UnitPrice" class="control-label">قیمت محصول</label>
-                    <input type="text"  class="form-control" asp-for="UnitPrice">
+                    <input type="text" class="form-control" asp-for="UnitPrice">
                     <span asp-validation-for="UnitPrice" class="error"></span>
                 </div>
             </div>
