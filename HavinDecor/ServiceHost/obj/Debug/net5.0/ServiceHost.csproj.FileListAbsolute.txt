@@ -150,3 +150,16 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Materials\Create.cshtml.g.cs
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Materials\Edit.cshtml.g.cs
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Materials\Index.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.Contracts.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Configuration.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Domain.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Configuration.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.Contracts.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Domain.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategories\Create.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategories\Edit.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategories\Index.cshtml.g.cs

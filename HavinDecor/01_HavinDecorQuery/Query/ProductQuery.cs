@@ -6,6 +6,7 @@ using _01_HavinDecorQuery.Contracts.Product;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
+using ShopManagement.Domain.MaterialAgg;
 using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagement.Infrastructure.EFCore;
 
@@ -38,6 +39,7 @@ namespace _01_HavinDecorQuery.Query
             var product = _context.Products
                 .Include(x=> x.Category)
                 .Include(x=> x.ProductPictures)
+                //.Include(x=> x.Materials)
                 .Select(x => new ProductQueryModel
                 {
                     Id = x.Id,
@@ -53,6 +55,7 @@ namespace _01_HavinDecorQuery.Query
                     ShortDescription = x.ShortDescription,
                     KeyWords = x.Keywords,
                     MetaDescription = x.MetaDescription,
+                    //Materials = MapMaterial(x.Materials),
                     ProductPictures = MapProductPicture(x.ProductPictures)
                 }).FirstOrDefault(x => x.Slug == slug);
 
@@ -89,6 +92,18 @@ namespace _01_HavinDecorQuery.Query
             
             return product;
         }
+
+        //private static List<MaterialQueryModel> MapMaterial(List<Material> Materials)
+        //{
+        //    return Materials.Select(x => new MaterialQueryModel
+        //    {
+        //        Id = x.Id,
+        //        Price = x.Price,
+        //        MaterialName = x.MaterialName,
+        //        Panel = x.Panel,
+        //        RingColor = x.RingColor
+        //    }).ToList();
+        //}
 
 
         public List<ProductQueryModel> GetLatestArrivals()
@@ -212,5 +227,16 @@ namespace _01_HavinDecorQuery.Query
                 }).Where(x => !x.IsRemoved).ToList();
         }
 
+        public List<MaterialQueryModel> GetMaterial()
+        {
+            return _context.Materials.Select(x => new MaterialQueryModel
+            {
+                Id = x.Id,
+                Price = x.Price,
+                MaterialName = x.MaterialName,
+                Panel = x.Panel,
+                RingColor = x.RingColor
+            }).ToList();
+        }
     }
 }

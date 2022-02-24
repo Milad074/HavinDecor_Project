@@ -1,16 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using _01_HavinDecorQuery.Contracts.Product;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+
 
 namespace ServiceHost.Pages
 {
     public class ProductModel : PageModel
     {
         public ProductQueryModel Product;
+
+        public List<MaterialQueryModel> Materials;
 
         private readonly IProductQuery _productQuery;
 
@@ -21,7 +22,10 @@ namespace ServiceHost.Pages
 
         public void OnGet(string id)
         {
+            ViewData["Materials"] = _productQuery.GetMaterial();
+
             Product = _productQuery.GetDetails(id);
+
         }
     }
 }

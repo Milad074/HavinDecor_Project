@@ -42,12 +42,17 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
+                    b.Property<long?>("ProductId")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("RingColor")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Materials");
                 });
@@ -275,6 +280,13 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("Slides");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.MaterialAgg.Material", b =>
+                {
+                    b.HasOne("ShopManagement.Domain.ProductAgg.Product", null)
+                        .WithMany("Materials")
+                        .HasForeignKey("ProductId");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
                     b.HasOne("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", "Category")
@@ -312,6 +324,8 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
 
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
+                    b.Navigation("Materials");
+
                     b.Navigation("ProductPictures");
                 });
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using _0_Framework.Domain;
+using ShopManagement.Domain.MaterialAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
 
@@ -34,6 +35,9 @@ namespace ShopManagement.Domain.ProductAgg
         public string MetaDescription { get; private set; }
 
         public List<ProductPicture> ProductPictures { get; private set; }
+
+        public List<Material> Materials { get; private set; }
+
 
         [ForeignKey("CategoryId")]
         public ProductCategory Category { get; private set; }

@@ -26,5 +26,7 @@ namespace _01_HavinDecorQuery.Contracts.Product
         public string MetaDescription { get; set; }
 
         public List<ProductPictureQueryModel> ProductPictures { get; set; }
+
+        public List<MaterialQueryModel> Materials { get; set; }
     }
 }

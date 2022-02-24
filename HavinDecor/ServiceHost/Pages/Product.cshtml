@@ -1,7 +1,10 @@
 ﻿@page "{id}"
+@using _01_HavinDecorQuery.Contracts.Product
 @model ServiceHost.Pages.ProductModel
 @{
     ViewData["Title"] = "جزئیات محصول";
+
+    List<MaterialQueryModel> Materials = ViewData["Materials"] as List<MaterialQueryModel>;
 }
 
 <div class="breadcrumb-area section-space--half">
@@ -73,7 +76,7 @@
                                                     </div>
                                                 }
 
-                                                
+
                                             </div>
                                         </div>
 
@@ -135,7 +138,37 @@
                                                 <a href="#">(2 reviews)</a> | <a href="#">نظر دهید</a>
                                             </span>
                                         </div>
-                                        
+
+                                        @if (@Model.Product.CategorySlug.Contains("پرده-چاپی"))
+                                        {
+                                            <div>
+                                                <div>
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>انتخاب نقش کاربر</label>
+                                                                    <div class="" >
+                                                                        <select id="ddlMaterial">
+                                                                            @foreach (var item in Materials)
+                                                                            {
+                                                                                <option value="@item.Id">
+                                                                                    @item.MaterialName @item.Panel &lang; @item.Price &rang;
+                                                                                </option>
+                                                                            }
+                                                                        </select>
+                                                                        <span id="priceDisplay"></span>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        }
+
                                         <p class="single-grid-product__price">
                                             @if (@Model.Product.HasDiscount)
                                             {
@@ -145,7 +178,7 @@
                                             }
                                             else
                                             {
-                                            <span class="main-price ">@Model.Product.Price تومان</span>
+                                                <span class="main-price ">@Model.Product.Price تومان</span>
                                             }
 
                                         </p>
@@ -162,7 +195,7 @@
 
                                         @if (Model.Product.HasDiscount)
                                         {
-                                            <div class="product-countdown"data-countdown=@Model.Product.EndDate></div>
+                                            <div class="product-countdown" data-countdown=@Model.Product.EndDate></div>
                                         }
 
                                         <div class="product-actions">
@@ -173,7 +206,7 @@
 
                                             <div class="product-buttons">
                                                 <a class="cart-btn" href="#">
-                                                    <i class="ion-bag"></i> 
+                                                    <i class="ion-bag"></i>
                                                     افزودن به سبد خرید
                                                 </a>
                                             </div>
@@ -207,9 +240,9 @@
                                         </div>
                                         <p class="single-info mb-0">
                                             کلمات کلیدی: @Model.Product.KeyWords
-                                            
+
                                             @*<a href="shop-left-sidebar.html">Dolor</a>
-                                            , <a href="shop-left-sidebar.html">Ipsum</a>, <a href="shop-left-sidebar.html">Lorem</a>*@
+                                                , <a href="shop-left-sidebar.html">Ipsum</a>, <a href="shop-left-sidebar.html">Lorem</a>*@
                                         </p>
 
 
@@ -412,3 +445,36 @@
         </div>
     </div>
 </div>
+
+
+<section>
+    <script>
+        $(document).ready(function () {
+            $("#ddlMaterial").change( function (event) {
+                var id = $(this).val();
+                var json = {id : id};
+
+                $.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("GetPrice", "Home")",
+                    dataType : "json",
+                    data: {"json": JSON.stringify(json)},
+                    success: function(data) {
+                        if(data.status == "true")
+                        {
+                            $("#priceDisplay").text(data.price);
+                        }
+                        else
+                        {
+                            alert('Some error');
+                        }
+                    },
+                    error: function(data) {
+                        alert('Some error');
+                        window.location.reload();
+                    }
+                });
+            });
+        });
+    </script>
+</section>
