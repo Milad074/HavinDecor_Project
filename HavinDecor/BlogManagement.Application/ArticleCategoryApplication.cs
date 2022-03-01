@@ -78,6 +78,7 @@ namespace BlogManagement.Application
         {
             return _articleCategoryRepository.Search(searchModel);
         }
+
     }
 
     
