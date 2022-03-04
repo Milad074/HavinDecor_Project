@@ -2684,10 +2684,9 @@ select {
 	display: -ms-flexbox;
 	display: flex;
 	flex-direction: column;
-	width: 62px;
-	height: 70px;
+    padding: 7px;
 	text-align: center;
-	background: #fff;
+	background: rgba(0,0,0,0.5);
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
@@ -2709,8 +2708,7 @@ select {
 .single-slider-post__date-sticker span.month {
 	font-weight: 500;
 	line-height: 12px;
-	margin-bottom: 10px;
-	color: #929292;
+    color: #fff;
 }
 
 .single-slider-post__date-sticker span.day {
@@ -2721,15 +2719,16 @@ select {
 }
 
 .single-slider-post__content .title {
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 1;
 	line-height: 18px;
 	margin-top: 20px;
 	margin-bottom: 15px;
+    color: #001632;
 }
 
 .single-slider-post__content .title a:hover {
-	color: #e33;
+	color: #752b03;
 }
 
 .single-slider-post__content .post-meta {
@@ -2747,19 +2746,24 @@ select {
 .single-slider-post__content .short-desc {
 	line-height: 24px;
 	margin-bottom: 0;
+    color: #333;
+    font-size: 16px;
 }
 
 .single-slider-post__content .blog-post-link {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 25px;
-	margin-top: 30px;
-	color: #292929;
-	border-bottom: 2px solid #e8e8e8;
+    font-size: 16px;
+    font-weight: 500;
+    /* line-height: 25px; */
+    margin-top: 30px;
+    padding: 7px;
+    color: #ffffff;
+    background: #51d2e7;
+    /* border-bottom: 2px solid #e8e8e8; */
+    box-shadow: 2px -2px 3px 0px #6c6767;
 }
 
 .single-slider-post__content .blog-post-link:hover {
-	color: #e33;
+	color: black;
 }
 
 /*----------  custom zoom in animation  ----------*/

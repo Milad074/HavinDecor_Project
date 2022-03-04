@@ -163,3 +163,9 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategories\Create.cshtml.g.cs
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategories\Edit.cshtml.g.cs
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategories\Index.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\Articles\Index.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\Articles\Create.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\Articles\Edit.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\LatestArticles\Default.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\Article.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\ArticleCategory.cshtml.g.cs

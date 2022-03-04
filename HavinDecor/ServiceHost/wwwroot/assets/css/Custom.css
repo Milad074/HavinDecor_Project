@@ -214,3 +214,16 @@
 .product-details-small-image-slider-wrapper .slick-prev {
   left: 0;
 }
+
+
+ /*article Coustom Style*/
+.blog-post-slider-area {
+    background: #ebe4d7;
+}
+.single-slider-post {
+    padding: 5px;
+}
+
+.single-slider-post .single-slider-post__content {
+    padding: 10px;
+}

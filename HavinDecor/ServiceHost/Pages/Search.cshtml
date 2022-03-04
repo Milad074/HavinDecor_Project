@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id}"
 @model ServiceHost.Pages.SearchModel
 @{
     ViewData["Title"] = " جستجو";
@@ -47,7 +47,7 @@
                                                             @*<span class="new">New</span>*@
                                                         </div>
                                                         <a asp-page="/Produt" asp-route-id="@product.Slug">
-                                                            <img src="@product.Picture" class="img-fluid"
+                                                            <img src="~/Pictures/@product.Picture" class="img-fluid"
                                                                  alt="@product.PictureAlt"
                                                                  title="@product.PictureTitle">
                                                             @*<img src="assets/img/products/1_1-600x800.jpg" class="img-fluid"

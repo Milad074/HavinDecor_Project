@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\01_HavinDecorQuery\01_HavinDecorQuery.csproj" />
     <ProjectReference Include="..\BlogManagement.Application.Contracts\BlogManagement.Application.Contracts.csproj" />
     <ProjectReference Include="..\BlogManagement.Application\BlogManagement.Application.csproj" />
     <ProjectReference Include="..\BlogManagement.Infrastructure\BlogManagement.Infrastructure.EFCore.csproj" />

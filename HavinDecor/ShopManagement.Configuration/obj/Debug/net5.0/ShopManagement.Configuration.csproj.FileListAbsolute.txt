@@ -35,3 +35,9 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configu
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\obj\Debug\net5.0\ref\ShopManagement.Configuration.dll
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Application.Contracts.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Application.Contracts.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb

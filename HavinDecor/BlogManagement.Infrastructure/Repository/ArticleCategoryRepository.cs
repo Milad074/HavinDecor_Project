@@ -39,9 +39,20 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
             return _context.ArticleCategories.Select(x => new {x.Id, x.Slug}).FirstOrDefault(x => x.Id == id)?.Slug;
         }
 
+        public List<ArticleCategoryViewModel> GerArticleCategories()
+        {
+            return _context.ArticleCategories.Select(x => new ArticleCategoryViewModel
+            {
+                Id = x.Id,
+                Name = x.Name
+            }).ToList();
+        }
+
         public List<ArticleCategoryViewModel> Search(ArticleCategorySearchModel searchModel)
         {
-            var query = _context.ArticleCategories.Select(x => new ArticleCategoryViewModel
+            var query = _context.ArticleCategories
+                .Include(x=> x.Articles)
+                .Select(x => new ArticleCategoryViewModel
             {
                 Id = x.Id,
                 Picture = x.Picture,
@@ -49,6 +60,7 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
                 CreationDate = x.CreationDate.ToFarsi(),
                 Description = x.Description,
                 Name = x.Name,
+                ArticlesCount = x.Articles.Count
             });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))

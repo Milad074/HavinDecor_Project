@@ -143,6 +143,21 @@ namespace _01_HavinDecorQuery.Query
                 return category;
         }
 
+        public List<ProductCategoryQueryModel> GetProductCategoriesWithChild()
+        {
+            return _context.ProductCategories
+                .Select(x => new ProductCategoryQueryModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Picture = x.Picture,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle,
+                    Slug = x.Slug,
+                    ParentId = Convert.ToInt64(x.ParentId)
+                }).AsNoTracking().ToList();
+        }
+
         private static List<ProductQueryModel> MapProduct(List<Product> products)
         {
             return products.Select(product => new ProductQueryModel

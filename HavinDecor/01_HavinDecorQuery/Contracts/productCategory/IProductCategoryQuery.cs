@@ -9,5 +9,8 @@ namespace _01_HavinDecorQuery.Contracts.productCategory
         List<ProductCategoryQueryModel> GetProductCategoriesWithProducts();
 
         ProductCategoryQueryModel GetProductCategoryWithProductsBy(string slug);
+
+        List<ProductCategoryQueryModel> GetProductCategoriesWithChild();
+
     }
 }

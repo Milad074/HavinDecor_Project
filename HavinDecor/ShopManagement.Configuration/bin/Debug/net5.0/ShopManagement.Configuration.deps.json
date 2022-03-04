@@ -1115,6 +1115,7 @@
       },
       "01_HavinDecorQuery/1.0.0": {
         "dependencies": {
+          "BlogManagement.Infrastructure.EFCore": "1.0.0",
           "DiscountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Infrastructure.EFCore": "1.0.0",
           "ShopManagement.Infrastructure.EFCore": "1.0.0"
@@ -1131,6 +1132,35 @@
         },
         "runtime": {
           "0_Framework.dll": {}
+        }
+      },
+      "BlogManagement.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.14"
+        },
+        "runtime": {
+          "BlogManagement.Application.Contracts.dll": {}
+        }
+      },
+      "BlogManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BlogManagement.Application.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "BlogManagement.Domain.dll": {}
+        }
+      },
+      "BlogManagement.Infrastructure.EFCore/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BlogManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13"
+        },
+        "runtime": {
+          "BlogManagement.Infrastructure.EFCore.dll": {}
         }
       },
       "DiscountManagement.Application.Contracts/1.0.0": {
@@ -1957,6 +1987,21 @@
       "sha512": ""
     },
     "0_Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogManagement.Infrastructure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -16,6 +16,6 @@ namespace BlogManagement.Application.Contracts.Article
 
         public long CategoryId {get; set; }
 
-        public string CreationDate { get; set; }
+        public string PublishingDate { get; set; }
     }
 }

@@ -1588,6 +1588,50 @@
           "bin/placeholder/0_Framework.dll": {}
         }
       },
+      "BlogManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.14"
+        },
+        "compile": {
+          "bin/placeholder/BlogManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogManagement.Application.Contracts.dll": {}
+        }
+      },
+      "BlogManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BlogManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlogManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogManagement.Domain.dll": {}
+        }
+      },
+      "BlogManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BlogManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13"
+        },
+        "compile": {
+          "bin/placeholder/BlogManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "DiscountManagement.Application.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6082,6 +6126,21 @@
       "path": "../0_Framework/0_Framework.csproj",
       "msbuildProject": "../0_Framework/0_Framework.csproj"
     },
+    "BlogManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../BlogManagement.Application.Contracts/BlogManagement.Application.Contracts.csproj",
+      "msbuildProject": "../BlogManagement.Application.Contracts/BlogManagement.Application.Contracts.csproj"
+    },
+    "BlogManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BlogManagement.Domain/BlogManagement.Domain.csproj",
+      "msbuildProject": "../BlogManagement.Domain/BlogManagement.Domain.csproj"
+    },
+    "BlogManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../BlogManagement.Infrastructure/BlogManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../BlogManagement.Infrastructure/BlogManagement.Infrastructure.EFCore.csproj"
+    },
     "DiscountManagement.Application.Contracts/1.0.0": {
       "type": "project",
       "path": "../CustomerDiscount.Application.Contract/DiscountManagement.Application.Contracts.csproj",
@@ -6130,6 +6189,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BlogManagement.Infrastructure.EFCore >= 1.0.0",
       "DiscountManagement.Infrastructure.EFCore >= 1.0.0",
       "InventoryManagement.Infrastructure.EFCore >= 1.0.0",
       "ShopManagement.Infrastructure.EFCore >= 1.0.0"
@@ -6170,6 +6230,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\BlogManagement.Infrastructure\\BlogManagement.Infrastructure.EFCore.csproj": {
+              "projectPath": "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\BlogManagement.Infrastructure\\BlogManagement.Infrastructure.EFCore.csproj"
+            },
             "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj": {
               "projectPath": "C:\\Users\\Milad\\source\\repos\\HavinDecor_Project\\HavinDecor\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj"
             },
