@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _01_HavinDecorQuery.Contracts.Comment;
 
 namespace _01_HavinDecorQuery.Contracts.Product
 {
@@ -24,6 +25,8 @@ namespace _01_HavinDecorQuery.Contracts.Product
         public string Code { get;  set; }
         public string KeyWords { get; set; }
         public string MetaDescription { get; set; }
+
+        public List<CommentQueryModel> Comments { get; set; }
 
         public List<ProductPictureQueryModel> ProductPictures { get; set; }
 

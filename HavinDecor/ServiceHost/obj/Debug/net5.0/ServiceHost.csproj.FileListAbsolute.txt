@@ -169,3 +169,14 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\LatestArticles\Default.cshtml.g.cs
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\Article.cshtml.g.cs
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Pages\ArticleCategory.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contracts.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contracts.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Comments\Index.cshtml.g.cs
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Configuration.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Configuration.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.pdb

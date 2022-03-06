@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _01_HavinDecorQuery.Contracts.Comment;
 
 namespace _01_HavinDecorQuery.Contracts.Article
 {
@@ -36,5 +37,6 @@ namespace _01_HavinDecorQuery.Contracts.Article
 
         public string CategorySlug { get; set; }
 
+        public List<CommentQueryModel> Comments { get; set; }
     }
 }

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
+using _01_HavinDecorQuery.Contracts.Comment;
 using _01_HavinDecorQuery.Contracts.Product;
+using CommentManagement.Infrastructure.EFCore;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
@@ -20,11 +22,15 @@ namespace _01_HavinDecorQuery.Query
 
         private readonly DiscountContext _discountContext;
 
-        public ProductQuery(ShopContext context, InventoryContext inventoryContext, DiscountContext discountContext)
+        private readonly CommentContext _commentContext;
+
+        public ProductQuery(ShopContext context, InventoryContext inventoryContext,
+            DiscountContext discountContext , CommentContext commentContext)
         {
             _context = context;
             _inventoryContext = inventoryContext;
             _discountContext = discountContext;
+            _commentContext = commentContext;
         }
 
         public ProductQueryModel GetDetails(string slug)
@@ -39,7 +45,6 @@ namespace _01_HavinDecorQuery.Query
             var product = _context.Products
                 .Include(x=> x.Category)
                 .Include(x=> x.ProductPictures)
-                //.Include(x=> x.Materials)
                 .Select(x => new ProductQueryModel
                 {
                     Id = x.Id,
@@ -55,7 +60,6 @@ namespace _01_HavinDecorQuery.Query
                     ShortDescription = x.ShortDescription,
                     KeyWords = x.Keywords,
                     MetaDescription = x.MetaDescription,
-                    //Materials = MapMaterial(x.Materials),
                     ProductPictures = MapProductPicture(x.ProductPictures)
                 }).FirstOrDefault(x => x.Slug == slug);
 
@@ -89,7 +93,20 @@ namespace _01_HavinDecorQuery.Query
                     product.PriceWithDiscount = (price - discountAmount).ToMoney();
                 }
             }
-            
+
+            product.Comments = _commentContext.Comments
+                .Where(x => !x.IsCanceled)
+                .Where(x => x.IsConfirmed)
+                .Where(x => x.Type == CommentType.Product)
+                .Where(x => x.OwnerRecordId == product.Id)
+                .Select(x => new CommentQueryModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Message = x.Message
+                }).OrderByDescending(x => x.Id).ToList();
+
+
             return product;
         }
 

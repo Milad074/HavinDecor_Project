@@ -1,10 +1,9 @@
 ﻿@page "{id}"
-@using _01_HavinDecorQuery.Contracts.Product
 @model ServiceHost.Pages.ProductModel
 @{
-    ViewData["Title"] = "جزئیات محصول";
-
-    List<MaterialQueryModel> Materials = ViewData["Materials"] as List<MaterialQueryModel>;
+    ViewData["Title"] = @Model.Product.Name;
+    ViewData["keywords"] = @Model.Product.KeyWords;
+    ViewData["metaDescription"] = @Model.Product.MetaDescription;
 }
 
 <div class="breadcrumb-area section-space--half">
@@ -139,7 +138,7 @@
                                             </span>
                                         </div>
 
-                                        @if (@Model.Product.CategorySlug.Contains("پرده-چاپی"))
+                                        @*@if (@Model.Product.CategorySlug.Contains("پرده-چاپی"))
                                         {
                                             <div>
                                                 <div>
@@ -167,7 +166,7 @@
                                                     </form>
                                                 </div>
                                             </div>
-                                        }
+                                        }*@
 
                                         <p class="single-grid-product__price">
                                             @if (@Model.Product.HasDiscount)
@@ -263,7 +262,7 @@
                                                    data-toggle="tab" href="#product-description" role="tab"
                                                    aria-selected="true">توضیحات</a>
                                                 <a class="nav-item nav-link" id="review-tab" data-toggle="tab"
-                                                   href="#review" role="tab" aria-selected="false">نظرات (1)</a>
+                                                   href="#review" role="tab" aria-selected="false">نظرات (@Model.Product.Comments.Count)</a>
                                             </div>
                                         </nav>
                                         <div class="tab-content" id="nav-tabContent">
@@ -282,7 +281,7 @@
                                                  aria-labelledby="review-tab">
 
                                                 <div class="product-rating-wrap">
-                                                    <div class="pro-avg-rating">
+                                                    @*<div class="pro-avg-rating">
                                                         <h4>4.5 <span>(Overall)</span></h4>
                                                         <span>Based on 9 Comments</span>
                                                     </div>
@@ -327,103 +326,51 @@
                                                             <i class="fa fa-star-o"></i>
                                                             <span>(0)</span>
                                                         </div>
-                                                    </div>
+                                                    </div>*@
                                                     <div class="ratings-wrapper">
-
-                                                        <div class="sin-ratings">
-                                                            <div class="rating-author">
-                                                                <h3>Cristopher Lee</h3>
-                                                                <div class="rating-star">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <span>(5)</span>
+                                                        @foreach (var comment in Model.Product.Comments)
+                                                        {
+                                                            <div class="sin-ratings">
+                                                                <div class="rating-author">
+                                                                    <h3>@comment.Name</h3>
+                                                                    @*<div class="rating-star">
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <span>(5)</span>
+                                                                    </div>*@
                                                                 </div>
+                                                                <p>
+                                                                    @comment.Message
+                                                                </p>
                                                             </div>
-                                                            <p>
-                                                                enim ipsam voluptatem quia voluptas sit
-                                                                aspernatur aut odit aut fugit, sed quia res eos
-                                                                qui ratione voluptatem sequi Neque porro
-                                                                quisquam est, qui dolorem ipsum quia dolor sit
-                                                                amet, consectetur, adipisci veli
-                                                            </p>
-                                                        </div>
-
-                                                        <div class="sin-ratings">
-                                                            <div class="rating-author">
-                                                                <h3>Rashed Mahmud</h3>
-                                                                <div class="rating-star">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <span>(5)</span>
-                                                                </div>
-                                                            </div>
-                                                            <p>
-                                                                enim ipsam voluptatem quia voluptas sit
-                                                                aspernatur aut odit aut fugit, sed quia res eos
-                                                                qui ratione voluptatem sequi Neque porro
-                                                                quisquam est, qui dolorem ipsum quia dolor sit
-                                                                amet, consectetur, adipisci veli
-                                                            </p>
-                                                        </div>
-
-                                                        <div class="sin-ratings">
-                                                            <div class="rating-author">
-                                                                <h3>Hasan Mubarak</h3>
-                                                                <div class="rating-star">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <span>(5)</span>
-                                                                </div>
-                                                            </div>
-                                                            <p>
-                                                                enim ipsam voluptatem quia voluptas sit
-                                                                aspernatur aut odit aut fugit, sed quia res eos
-                                                                qui ratione voluptatem sequi Neque porro
-                                                                quisquam est, qui dolorem ipsum quia dolor sit
-                                                                amet, consectetur, adipisci veli
-                                                            </p>
-                                                        </div>
-
+                                                        }
                                                     </div>
                                                     <div class="rating-form-wrapper fix">
-                                                        <h3>Add your Comments</h3>
-                                                        <form action="#">
+                                                        <h3>نظر خود را وارد کنید</h3>
+                                                        <form method="post">
                                                             <div class="rating-form row">
-                                                                <div class="col-12 mb-15">
-                                                                    <h5>Rating:</h5>
-                                                                    <div class="rating-star fix">
-                                                                        <i class="fa fa-star-o"></i>
-                                                                        <i class="fa fa-star-o"></i>
-                                                                        <i class="fa fa-star-o"></i>
-                                                                        <i class="fa fa-star-o"></i>
-                                                                        <i class="fa fa-star-o"></i>
-                                                                    </div>
+                                                                <div class="col-md-6 col-12 form-group">
+                                                                    <label for="name">نام:</label>
+                                                                    <input id="name" placeholder="مثال:میلاد غایبی" name="name" type="text">
                                                                 </div>
                                                                 <div class="col-md-6 col-12 form-group">
-                                                                    <label for="name">Name:</label>
-                                                                    <input id="name" placeholder="Name" type="text">
-                                                                </div>
-                                                                <div class="col-md-6 col-12 form-group">
-                                                                    <label for="email">Email:</label>
-                                                                    <input id="email" placeholder="Email"
-                                                                           type="text">
+                                                                    <label for="email">ایمیل:</label>
+                                                                    <input id="email" placeholder="مثال:mehrsam073@gmail.com"
+                                                                           type="text" name="email">
                                                                 </div>
                                                                 <div class="col-12 form-group">
-                                                                    <label for="your-review">Your Review:</label>
-                                                                    <textarea name="review" id="your-review"
+                                                                    <label for="your-review">نظر شما:</label>
+                                                                    <textarea name="message" id="message"
                                                                               placeholder="Write a review"></textarea>
                                                                 </div>
+                                                                <input type="hidden" name="ownerRecordId" value="@Model.Product.Id"/>
+                                                                <input type="hidden" name="productSlug" value="@Model.Product.Slug"/>
+
                                                                 <div class="col-12">
-                                                                    <input value="add review" type="submit">
+                                                                    <input value="ارسال" type="submit">
                                                                 </div>
                                                             </div>
                                                         </form>

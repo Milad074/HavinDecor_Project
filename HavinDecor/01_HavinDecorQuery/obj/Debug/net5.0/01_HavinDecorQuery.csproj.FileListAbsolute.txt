@@ -37,3 +37,9 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin\Debug\net5.0\BlogManagement.Application.Contracts.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin\Debug\net5.0\BlogManagement.Domain.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin\Debug\net5.0\CommentManagement.Application.Contracts.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin\Debug\net5.0\CommentManagement.Domain.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin\Debug\net5.0\CommentManagement.Application.Contracts.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\01_HavinDecorQuery\bin\Debug\net5.0\CommentManagement.Domain.pdb
