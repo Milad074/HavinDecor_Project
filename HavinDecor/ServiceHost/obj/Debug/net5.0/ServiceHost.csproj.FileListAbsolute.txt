@@ -180,3 +180,13 @@ C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.pdb
 C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Application.Contracts.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Application.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Configuration.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Domain.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Configuration.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Application.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Application.Contracts.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Domain.pdb
+C:\Users\Milad\source\repos\HavinDecor_Project\HavinDecor\ServiceHost\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
